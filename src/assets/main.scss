@@ -1,0 +1,76 @@
+// GLobale SCSS können in den Views jeweils unter Style mit dem Attribut "lang = "scss" überschrieben werden.
+//----------------------------------------------------------------------------------------------------------
+
+@import "https://use.typekit.net/ckm2djo.css";
+@import "http://fonts.cdnfonts.com/css/bahnschrift";
+
+*{
+box-sizing: border-box;
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+:root {
+    --orange: #C93F08;
+    --darkgrey: #2F2D2E;
+    --blue: #71ade0;
+    --lightblue: #e7f9f9;
+    --green: #26867B;
+
+    --headline-size: 36px;
+    --subline-size: 26px;
+    --title-size: 23px;
+    --paragraph-size: 16px;
+    --infotext-size: 14px;
+}
+
+h1 {
+    font-size: var(--headline-size);
+    font-family: allotrope, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+h2 {
+    font-size: var(--subline-size);
+    font-family: allotrope, sans-serif;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: var(--title-size);
+    font-family: allotrope, sans-serif;
+    font-weight: 500;
+}
+
+p {
+    font-size: var(--paragraph-size);
+    font-family: bahnschrift;
+    font-weight: 300;
+}
+a {
+    font-size: var(--paragraph-size);
+    font-family: bahnschrift;
+    font-weight: 500;
+    color: var(--orange); 
+}
+a:hover {
+    color: var(--darkgrey); 
+    text-decoration: underline;
+}
+
+figure {
+    font-size: var(--infotext-size);
+    font-family: bahnschrift;
+    font-weight: 300;
+    font-stretch: condensed;
+}
+.logo-header {
+    width: 5%;    
+}
