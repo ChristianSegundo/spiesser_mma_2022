@@ -1,14 +1,13 @@
 <template>
   <FirstComponent></FirstComponent>
-  <h1>Passwort_VergessenView - Spiesser</h1>
+  <h1>RegistrierenView - Spiesser</h1>
 </template>
 
 <script>
 
 export default {
-  name: 'Passwort_VergessenView',
+  name: 'RegistrierenView',
   components: {
-
   }
 }
 </script>

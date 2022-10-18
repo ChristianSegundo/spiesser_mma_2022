@@ -1,6 +1,6 @@
 <template>
   <FirstComponent></FirstComponent>
-  <h1>Profil_Angaben_aendernView - Spiesser</h1>
+  <h1>Profil_Angaben_AendernView - Spiesser</h1>
 </template>
 
 <script>
@@ -8,7 +8,7 @@
 import FirstComponent from '@/components/FirstComponent.vue'
 
 export default {
-  name: 'Profil_Angaben_aendernView',
+  name: 'Profil_Angaben_AendernView',
   components: {
     FirstComponent
   }

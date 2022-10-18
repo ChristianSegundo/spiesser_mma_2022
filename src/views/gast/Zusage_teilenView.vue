@@ -1,6 +1,6 @@
 <template>
   <FirstComponent></FirstComponent>
-  <h1>Zusage_teilenView - Spiesser</h1>
+  <h1>Zusage_TeilenView - Spiesser</h1>
 </template>
 
 <script>
@@ -8,7 +8,7 @@
 import FirstComponent from '@/components/FirstComponent.vue'
 
 export default {
-  name: 'Zusage_teilenView',
+  name: 'Zusage_TeilenView',
   components: {
     FirstComponent
   }

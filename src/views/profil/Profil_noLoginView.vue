@@ -1,6 +1,6 @@
 <template>
   <FirstComponent></FirstComponent>
-  <h1>Profil_noLoginView - Spiesser</h1>
+  <h1>Profil_NoLoginView - Spiesser</h1>
 </template>
 
 <script>
@@ -8,7 +8,7 @@
 import FirstComponent from '@/components/FirstComponent.vue'
 
 export default {
-  name: 'Profil_noLoginView',
+  name: 'Profil_NoLoginView',
   components: {
     FirstComponent
   }
