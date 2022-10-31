@@ -2,7 +2,7 @@
   <FirstComponent></FirstComponent>
   <h1>Dashboard_EventsView - Spiesser</h1>
 </template>
-
+<p>ich bin Christian</p>
 <script>
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
