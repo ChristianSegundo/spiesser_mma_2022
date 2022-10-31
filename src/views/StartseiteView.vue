@@ -1,6 +1,9 @@
 <template>
   <h1>StartseiteView - Spiesser</h1>
-  <router-link to='/organisator/event-erstellen-01'>Brötle Event</router-link>
+  <a href="/organisator/event-erstellen-01">
+      <button>Brötle Event</button>
+  </a>
+
 </template>
 
 <script>

@@ -31,7 +31,7 @@ const routes = [
     component: Email_BestaetigenView
   },
   {
-    path: '/login/login',
+    path: '/login',
     name: 'LoginView',
     component: LoginView
   },
@@ -73,7 +73,7 @@ const routes = [
       component: Event_Erstellen_EinladungView
     },
     {
-      path: '/organisator/event_erstellen_vorschau',
+      path: '/organisator/event-erstellen-vorschau',
       name: 'Event_Erstellen_VorschauView',
       component: Event_Erstellen_VorschauView
     }

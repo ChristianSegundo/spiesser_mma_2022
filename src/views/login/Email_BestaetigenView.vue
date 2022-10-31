@@ -1,6 +1,6 @@
 <template>
-  <FirstComponent></FirstComponent>
-  <h1>Email_BestaetigenView - Spiesser</h1>
+  <h1>Bitte bestätige deine Mail</h1>
+  <a href="/">Du findest den Bestätigungslink in deinem E-Mail Postfach.</a>
 </template>
 
 <script>

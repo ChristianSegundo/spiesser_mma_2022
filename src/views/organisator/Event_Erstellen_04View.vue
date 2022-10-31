@@ -1,6 +1,10 @@
 <template>
-  <h1>Event_Erstellen_04View - Spiesser</h1>
-  <router-link to='/login/login'>Einladungslink erstellen</router-link>
+  <h1>Was dürfen deine Gäste mitbringen?</h1>
+  <h2>Mitbring-Dinge hinzufügen</h2>
+  <div>MitbringselListe-Platzhalter</div>
+  <a href="/organisator/event-erstellen-vorschau">
+      <button>Einladungslink erstellen</button>
+  </a>
 </template>
 
 <script>

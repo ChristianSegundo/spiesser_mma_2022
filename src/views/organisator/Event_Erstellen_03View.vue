@@ -1,7 +1,10 @@
 <template>
-  <h1>Event_Erstellen_03View - Spiesser</h1>
-  <router-link to='/organisator/event-erstellen-04'>Weiter</router-link>
-
+  <h1>Location</h1>
+  <input type="text" placeholder="Wo findet das Brötle-Event statt?">
+  <div>Maps-Platzhalter</div>
+  <a href="/organisator/event-erstellen-04">
+      <button>Weiter</button>
+  </a>
 </template>
 
 <script>
