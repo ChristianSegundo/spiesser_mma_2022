@@ -1,9 +1,6 @@
 <template>
-  <div>
   <FirstComponent></FirstComponent>
   <h1>Dashboard_EventsView - Spiesser</h1>
-</div>
-  <p>Hallo ich bin Christian</p>
 </template>
 
 <script>
