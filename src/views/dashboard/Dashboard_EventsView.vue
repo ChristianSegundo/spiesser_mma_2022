@@ -1,6 +1,8 @@
 <template>
+  <div>
   <FirstComponent></FirstComponent>
   <h1>Dashboard_EventsView - Spiesser</h1>
+</div>
 </template>
 
 <script>
