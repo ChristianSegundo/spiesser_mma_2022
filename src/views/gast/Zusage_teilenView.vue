@@ -1,6 +1,6 @@
 <template>
-  <FirstComponent></FirstComponent>
   <h1>Zusage_TeilenView - Spiesser</h1>
+  
 </template>
 
 <script>
