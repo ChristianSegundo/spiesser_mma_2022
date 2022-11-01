@@ -5,6 +5,7 @@
   <input type="text" placeholder="Name*" required>
   <input type="email" placeholder="E-Mail*" required>
   <router-link to='/login/passwort-vergessen'>Passwort vergessen</router-link>
+  
   <a href="/">
       <button>Einloggen</button>
   </a>

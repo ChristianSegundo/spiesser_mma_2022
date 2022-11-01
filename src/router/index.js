@@ -169,7 +169,7 @@ const routes = [
       component: Event_MonitoringView
     },
     {
-      path: '/dashboard/event-uebersicht',
+      path: '/dashboard/events',
       name: 'Event_UebersichtView',
       component: Event_UebersichtView
     },
