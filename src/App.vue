@@ -10,7 +10,7 @@
 
 <style lang="scss">
 #app {
-background-color: #E8490B;
-color: #e8f9fa;
+background-color: #f1f1f1;
+color: #2D2D2D;
 }
 </style>
