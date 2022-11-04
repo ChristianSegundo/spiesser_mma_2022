@@ -8,7 +8,6 @@
   <router-link to='/dashboard/events'>DashboardView</router-link><br>
   <router-link to='/profil/profil'>ProfilView</router-link>
 
-
   <div class="middle">
     <router-link to='/organisator/event-erstellen-01' class="button-10">Brötle-Event erstellen</router-link>
   </div>

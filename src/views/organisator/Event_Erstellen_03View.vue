@@ -1,18 +1,24 @@
 <template>
   <h1>Location</h1>
-  <input type="text" placeholder="Wo findet das Brötle-Event statt?">
+  <p>{{new_event}}</p>
+  <input type="text" placeholder="Wo findet das Brötle-Event statt?" v-model="new_event.ort">
   <div>Maps-Platzhalter</div>
-  <a href="/organisator/event-erstellen-04">
-      <button>Weiter</button>
-  </a>
+  <router-link to='/organisator/event-erstellen-04' class="button-10 space-top">Weiter</router-link>
+
 </template>
 
 <script>
+import {new_event} from "../../new_event.js";
 
 export default {
   name: 'Event_Erstellen_03View',
-  components: {
+  data(){
+    return{
+      new_event
+    }
+  },
 
+  components: {
   }
 }
 </script>

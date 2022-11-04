@@ -1,4 +1,5 @@
 <template>
+  <p>{{new_event}}</p>
   <h1>Wann findet dein Brötle-Event statt?</h1>
   <input type="text" placeholder="13">
   <p>:</p>
@@ -8,18 +9,22 @@
   <button>Switch</button>
   <p>Zusage bis zum:</p>
   <input type="date">
-  <a href="/organisator/event-erstellen-03">
-      <button>Weiter</button>
-  </a>
+  <router-link to='/organisator/event-erstellen-03' class="button-10 space-top">Weiter</router-link>
 </template>
 
 <script>
+import { new_event } from '../../new_event.js'
 
 export default {
   name: 'Event_Erstellen_02View',
   components: {
 
-  }
+  },
+  data() {
+    return {
+      new_event,
+    }
+  },
 }
 </script>
 
