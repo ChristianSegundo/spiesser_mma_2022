@@ -1,12 +1,12 @@
 <template>
   <p>{{new_event}}</p>
   <h1>Wann findet dein Brötle-Event statt?</h1>
-  <input type="text" placeholder="13">
+  <input type="text" placeholder="13" v-model="new_event.startzeit.stunde">
   <p>:</p>
-  <input type="text" placeholder="30">
+  <input type="text" placeholder="30" v-model="new_event.startzeit.minute">
   <input type="date">
-  <div>Kalenderplatzhalter</div>
-  <button>Switch</button>
+  <div>((Kalenderplatzhalter))</div>
+  <input type="checkbox" class="zusagedatum" name="zusagedatum"> <!-- Toggle für Deadline -->
   <p>Zusage bis zum:</p>
   <input type="date">
   <router-link to='/organisator/event-erstellen-03' class="button-10 space-top">Weiter</router-link>
