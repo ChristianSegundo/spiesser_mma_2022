@@ -11,6 +11,6 @@
 <style lang="scss">
 #app {
 background-color: #f1f1f1;
-color: #2D2D2D;
+color: #2d2d2d;
 }
 </style>

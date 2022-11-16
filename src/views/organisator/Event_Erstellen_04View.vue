@@ -13,10 +13,8 @@ export default {
   components: {
 
   }
-
 }
-
-  // mitbringsel:[{1},{2},{}]
+ // mitbringsel:[{1},{2},{}]
 
   // 1 = {mitbringsel: "holz", user: "brenda"}
   // 2 = {mitbringsel: "gascho", user}
