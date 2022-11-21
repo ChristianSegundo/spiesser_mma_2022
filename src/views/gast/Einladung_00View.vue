@@ -1,10 +1,12 @@
 <template>
-  <h1>Einladung_00View - Spiesser</h1>
-  <img src="spiesser_logo.jpg" alt="Spiesser Logo">
-  <p>Du hast soeben eine Einladung von Jael Zimmermann erhalten. Informiere dich jetzt über das Event.</p>
-  <a href="/gast/einladung-01">
-    <button>zum Event</button>
-  </a>
+  <div id="logo-header">
+    <img src="../../assets/img/Logo_Negativ_1.png" alt="Spiesser Logo" >
+  </div>
+  <p class="preview-text">Du hast soeben eine Einladung von Jael Zimmermann erhalten. Informier dich jetzt über das Event.</p>
+  <router-link to='/gast/Einladung_01View' class="button-10 space-top">Weiter</router-link>
+
+  <!-- <FirstComponent></FirstComponent> -->
+  <!-- <h1>Einladung_00View - Spiesser</h1> -->
 </template>
 
 <script>

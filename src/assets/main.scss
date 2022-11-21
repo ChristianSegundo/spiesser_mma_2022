@@ -60,7 +60,7 @@ h3 {
     font-weight: 500;
 }
 
-p {
+p, label {
     font-size: var(--paragraph-size);
     font-family: bahnschrift;
     font-weight: 300;
@@ -70,7 +70,7 @@ a {
     font-family: bahnschrift;
     font-weight: 500;
     color: var(--orange); 
-}
+} 
 a:hover {
     color: var(--darkgrey); 
     text-decoration: underline;
@@ -156,8 +156,6 @@ input, textarea {
     display: flex;
     padding: 10px 130px;
 }
-#time-choose input::placeholder {
-}
 
   #time-choose input{
     background-color: var(--darkgrey);
@@ -222,4 +220,116 @@ input, textarea {
 #zusage-toggle p {
     text-align: left;
     padding-left: 20px;
+}
+.mitbringliste li{
+    font-weight: 700;
+    font-family: allotrope, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    list-style: none;
+    padding: 16px 0;
+    border-bottom: #2F2D2E 1px solid;
+}
+.mitbringliste ul, li{
+    width: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+// .mitbringliste-input {
+//     background-color: #f1f1f1;
+//     border: solid #2F2D2E;
+//     border-width: 0 0 1px 0;
+//     border-radius: 0px;
+//     width: 300px;
+//     margin-top: 50px;
+//     font-weight: 700;
+//     font-family: allotrope, sans-serif;
+//     font-size: 16px;
+// }
+
+.mitbringliste-input {
+    display: flex;
+    width: 300px;
+    margin-top: 50px;
+}
+.mitbringliste-input input {
+    width: 80%;
+    margin: 0;
+    background-color: #f1f1f1;
+    border: solid #2F2D2E;
+    border-width: 0 0 1px 0;
+    border-radius: 0px;
+
+}
+.mitbringliste-input button {
+    width: 20%;
+    border: solid #2F2D2E;
+    border-width: 0 0 1px 0;
+}
+.mitbringliste-input svg {
+    width: 50%;
+    background-color: #f1f1f1;
+    border: none;
+    fill: #C93F08;
+    transition: all ease-in-out 0.2s;
+}
+.mitbringliste-input svg:hover {
+    fill: #2F2D2E;
+    width: 55%;
+}
+.preview-date {
+    background: white;
+    border-radius: 5px;
+    padding: 15px 10px;
+    width: 300px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.25);
+}
+.preview-date #date {
+    background: #2F2D2E;
+    color: white;
+    width: 60%;
+    padding: 15px;
+    margin: auto;
+    font-size: 16px;
+    font-family: allotrope, sans-serif;
+    font-weight: 700;
+}
+.preview-date #time {
+    width: 60%;
+    padding: 15px 15px 0px;
+    margin: auto;
+    font-size: 16px;
+    font-family: allotrope, sans-serif;
+    font-weight: 700;
+}
+.preview-map {
+    background-color: white;
+    height: 200px;
+    width: 300px;
+    margin: 25px 0;
+}
+.preview-text {
+    width: 300px;
+    background: #d5d5d5;
+    padding: 15px;
+    margin: 0;
+}
+.event-invite-buttons svg {
+    width: 30%;
+    fill: white;
+    margin: auto;
+}
+.event-invite-buttons svg:hover {
+    width: 32%;
+    fill: var(--darkgrey);
+}
+.event-invite-buttons {
+    display: flex;
+    width: 300px;
+}
+.button-5 {
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
