@@ -32,10 +32,9 @@
   
   <style scoped>
   .container {
-  text-align: center;
-  width: 90%;
-  position: absolute;
-    top: 30px;
+    text-align: center;
+    width: 90%;
+    margin-top: 30px;
 }
 
 .progress-container {

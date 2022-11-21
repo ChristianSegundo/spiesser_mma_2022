@@ -1,12 +1,12 @@
 <template>
-  <h1>Zusage_00View - Spiesser</h1>
-  <h2>Wer bist du?</h2>
+  <h1>Wer bist du?</h1>
   <input type="text" id="gastname" name="gastname" placeholder="Name*"><br>
   <input type="email" id="gastemail" name="gastemail" placeholder="Email"><br>
-  <p>Wenn du keine Mail hinterlegst, können wir dir keine Updates und Informationen zum Event senden.</p>
-  <a href="/gast/zusage-mitbring-dinge-01">
-    <button>weiter</button>
-  </a>
+  <figure>Wenn du keine Mail hinterlegst, können wir dir keine Updates und Informationen zum Event senden.</figure>
+
+  <router-link to='Zusage_Mitbring_Dinge_01View' class="button-10 space-top">Weiter</router-link>
+
+  
 </template>
 
 <script>

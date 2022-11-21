@@ -1,6 +1,5 @@
 <template>
-  <h1>AbsageView - Spiesser</h1>
-  <h2>Schade!</h2>
+  <h1>Schade!</h1>
   <p>Auf ein anderes Mal</p>
 </template>
 

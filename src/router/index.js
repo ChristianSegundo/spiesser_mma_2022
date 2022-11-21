@@ -22,8 +22,6 @@ import AbsageView from '../views/gast/AbsageView.vue'
 import Zusage_00View from '../views/gast/Zusage_00View.vue'
 import Zusage_ErfolgreichView from '../views/gast/Zusage_ErfolgreichView.vue'
 import Zusage_Mitbring_Dinge_01View from '../views/gast/Zusage_Mitbring_Dinge_01View.vue'
-import Zusage_Mitbring_Dinge_02View from '../views/gast/Zusage_Mitbring_Dinge_02View.vue'
-import Zusage_Mitbring_Dinge_03View from '../views/gast/Zusage_Mitbring_Dinge_03View.vue'
 import Zusage_TeilenView from '../views/gast/Zusage_TeilenView.vue'
 import Zusage_TeilnehmerView from '../views/gast/Zusage_TeilnehmerView.vue'
 
@@ -102,52 +100,42 @@ const routes = [
   //  END ORGANISATOR VIEWS (views/organisator)
   //  START GAST VIEWS (views/gast)
     {
-      path: '/gast/einladung-00',
+      path: '/gast/Einladung_00View',
       name: 'Einladung_00View',
       component: Einladung_00View
     },
     {
-      path: '/gast/einladung-01',
+      path: '/gast/Einladung_01View',
       name: 'Einladung_01View',
       component: Einladung_01View
     },
     {
-      path: '/gast/absage',
+      path: '/gast/AbsageView',
       name: 'AbsageView',
       component: AbsageView
     },
     {
-      path: '/gast/zusage-00',
+      path: '/gast/Zusage_00View',
       name: 'Zusage_00View',
       component: Zusage_00View
     },
     {
-      path: '/gast/zusage-erfolgreich',
+      path: '/gast/Zusage_ErfolgreichView',
       name: 'Zusage_ErfolgreichView',
       component: Zusage_ErfolgreichView
     },
     {
-      path: '/gast/zusage-mitbring-dinge-01',
+      path: '/gast/Zusage_Mitbring_Dinge_01View',
       name: 'Zusage_Mitbring_Dinge_01View',
       component: Zusage_Mitbring_Dinge_01View
     },
     {
-      path: '/gast/zusage-mitbring-dinge-02',
-      name: 'Zusage_Mitbring_Dinge_02View',
-      component: Zusage_Mitbring_Dinge_02View
-    },
-    {
-      path: '/gast/zusage-mitbring-dinge-03',
-      name: 'Zusage_Mitbring_Dinge_03View',
-      component: Zusage_Mitbring_Dinge_03View
-    },
-    {
-      path: '/gast/zusage-teilen',
+      path: '/gast/Zusage_TeilenView',
       name: 'Zusage_TeilenView',
       component: Zusage_TeilenView
     },
     {
-      path: '/gast/zusage-teilnehmer',
+      path: '/gast/Zusage_TeilnehmerView',
       name: 'Zusage_TeilnehmerView',
       component: Zusage_TeilnehmerView
     },
