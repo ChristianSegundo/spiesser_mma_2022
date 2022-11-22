@@ -4,7 +4,7 @@
   </div>
 
   <div class="middle">
-    <router-link style="padding: 50px 40px;" to='/organisator/event-erstellen-01' class="button-10">
+    <router-link style="padding: 30px 40px;" to='/organisator/event-erstellen-01' class="button-10">
       <span style="    
       width: 20px;
       fill: white;

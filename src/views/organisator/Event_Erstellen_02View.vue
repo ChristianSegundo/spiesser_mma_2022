@@ -4,7 +4,7 @@
   <h1>Wann findet dein Brötle-Event statt?</h1>
 
   <div id="time-choose">
-    <input type="time" min="1" max="24" v-model="new_event.startzeit.stunde">
+    <input type="time" min="1" max="24" v-model="new_event.startzeit">
   </div>
   <input type="date" id="date-input">
 

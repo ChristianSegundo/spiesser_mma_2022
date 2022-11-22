@@ -37,7 +37,7 @@
     </button>
   </div>
 
-  <router-link to='/gast/Zusage_TeilnehmerView' class="button-10 space-top">Zusage</router-link>
+  <router-link to='/gast/zusage-teilnehmer' class="button-10 space-top">Zusage</router-link>
 
 </template>
 

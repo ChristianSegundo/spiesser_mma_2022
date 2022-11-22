@@ -16,7 +16,7 @@
     </label>
   </div>
 
-  <router-link to='/gast/Zusage_TeilenView' class="button-10 space-top">Weiter</router-link>
+  <router-link to='/gast/zusage-teilen' class="button-10 space-top">Weiter</router-link>
 
 </template>
 

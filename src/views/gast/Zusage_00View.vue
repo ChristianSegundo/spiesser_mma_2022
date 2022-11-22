@@ -4,7 +4,7 @@
   <input type="email" id="gastemail" name="gastemail" placeholder="Email"><br>
   <figure>Wenn du keine Mail hinterlegst, können wir dir keine Updates und Informationen zum Event senden.</figure>
 
-  <router-link to='Zusage_Mitbring_Dinge_01View' class="button-10 space-top">Weiter</router-link>
+  <router-link to='/gast/zusage-mitbring-dinge-01' class="button-10 space-top">Weiter</router-link>
 
   
 </template>

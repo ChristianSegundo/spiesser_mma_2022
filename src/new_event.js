@@ -4,7 +4,6 @@ export const new_event = reactive({
             eventname: undefined,
             eventbeschreibung: undefined,
             startzeit: undefined,
-            // startzeit: {stunde: number, minute: number},
             datum: undefined,
             zusagedatum: undefined,
             ort: undefined,

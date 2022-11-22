@@ -100,42 +100,42 @@ const routes = [
   //  END ORGANISATOR VIEWS (views/organisator)
   //  START GAST VIEWS (views/gast)
     {
-      path: '/gast/Einladung_00View',
+      path: '/gast/einladung-00',
       name: 'Einladung_00View',
       component: Einladung_00View
     },
     {
-      path: '/gast/Einladung_01View',
+      path: '/gast/einladung-01',
       name: 'Einladung_01View',
       component: Einladung_01View
     },
     {
-      path: '/gast/AbsageView',
+      path: '/gast/absage',
       name: 'AbsageView',
       component: AbsageView
     },
     {
-      path: '/gast/Zusage_00View',
+      path: '/gast/zusage-00',
       name: 'Zusage_00View',
       component: Zusage_00View
     },
     {
-      path: '/gast/Zusage_ErfolgreichView',
+      path: '/gast/zusage-erfolgreich',
       name: 'Zusage_ErfolgreichView',
       component: Zusage_ErfolgreichView
     },
     {
-      path: '/gast/Zusage_Mitbring_Dinge_01View',
+      path: '/gast/zusage-mitbring-dinge-01',
       name: 'Zusage_Mitbring_Dinge_01View',
       component: Zusage_Mitbring_Dinge_01View
     },
     {
-      path: '/gast/Zusage_TeilenView',
+      path: '/gast/zusage-teilen',
       name: 'Zusage_TeilenView',
       component: Zusage_TeilenView
     },
     {
-      path: '/gast/Zusage_TeilnehmerView',
+      path: '/gast/zusage-teilnehmer',
       name: 'Zusage_TeilnehmerView',
       component: Zusage_TeilnehmerView
     },

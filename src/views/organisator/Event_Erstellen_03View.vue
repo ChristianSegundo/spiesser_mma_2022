@@ -8,12 +8,14 @@
 </template>
 
 <script>
+import { new_event } from '../../new_event.js'
+
 
 export default {
   name: 'Event_Erstellen_03View',
     data(){
     return{
-      // new_event
+      new_event
     }
   },
 

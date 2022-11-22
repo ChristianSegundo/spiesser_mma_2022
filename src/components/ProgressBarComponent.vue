@@ -21,7 +21,7 @@
     </div>
 
   </template>
-  
+  <!-- mit Router arbeiten  -->
   <script>
   export default {
     name: 'ProgressBarComponent',

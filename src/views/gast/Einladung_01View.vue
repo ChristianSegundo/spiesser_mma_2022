@@ -41,8 +41,8 @@
   </div>
 
   <div class="event-invite-buttons">
-    <router-link to='/gast/Zusage_00View' class="button-10 space-top button-5">Zusage</router-link>
-    <router-link to='/gast/AbsageView' class="button-10 space-top button-5 invert-button">Absage</router-link>
+    <router-link to='/gast/zusage-00' class="button-10 space-top button-5">Zusage</router-link>
+    <router-link to='/gast/absage' class="button-10 space-top button-5 invert-button">Absage</router-link>
   </div>
 
 </template>
