@@ -19,17 +19,14 @@
   </div>
 
   <p>in die Zwischenablage kopiert!</p>
-  <NavigationComponent></NavigationComponent>
 </template>
 
 <script>
-import NavigationComponent from '@/components/NavigationComponent.vue';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
 export default {
   name: 'Event_Erstellen_EinladungView',
   components: {
-    NavigationComponent : NavigationComponent,
     ProgressBarComponent : ProgressBarComponent
   }
 }

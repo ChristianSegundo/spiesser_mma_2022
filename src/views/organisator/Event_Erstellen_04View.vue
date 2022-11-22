@@ -22,17 +22,14 @@
   <router-link to='/organisator/event-erstellen-vorschau' class="button-10 space-top">Einladungslink erstellen
   </router-link>
 
-  <NavigationComponent></NavigationComponent>
 </template>
 
 <script>
-import NavigationComponent from '@/components/NavigationComponent.vue';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
 export default {
   name: 'Event_Erstellen_04View',
   components: {
-    NavigationComponent: NavigationComponent,
     ProgressBarComponent: ProgressBarComponent
 
   }

@@ -17,17 +17,14 @@
       Brötle-Event erstellen
     </router-link>
   </div>
-  <NavigationComponent></NavigationComponent>
 </template>
 
 <script>
 // @ is an alias to /src
-import NavigationComponent from '@/components/NavigationComponent.vue';
 
 export default {
   name: 'StartseiteView',
   components: {
-    NavigationComponent: NavigationComponent
   }
 }
 </script>

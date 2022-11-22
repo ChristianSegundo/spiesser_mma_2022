@@ -17,17 +17,14 @@
   <button class="button-10 space-top">Zum Kalender hinzufügen</button>
 
 
-  <NavigationComponent></NavigationComponent>
 </template>
 
 <script>
-import NavigationComponent from '@/components/NavigationComponent.vue';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
 export default {
   name: 'Event_Erstellen_VorschauView',
   components: {
-    NavigationComponent: NavigationComponent,
     ProgressBarComponent: ProgressBarComponent
   }
 }

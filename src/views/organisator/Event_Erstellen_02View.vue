@@ -24,14 +24,12 @@
   <input type="date" id="date-input-2" >
 
   <router-link to='/organisator/event-erstellen-03' class="button-10 space-top">Weiter</router-link>
-  <NavigationComponent></NavigationComponent>
 
 
 </template>
 
 <script>
 import { new_event } from '../../new_event.js'
-import NavigationComponent from '@/components/NavigationComponent.vue';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
 export default {
@@ -47,7 +45,6 @@ export default {
     }
   },
     components: {
-      NavigationComponent: NavigationComponent,
       ProgressBarComponent: ProgressBarComponent
 
     }
