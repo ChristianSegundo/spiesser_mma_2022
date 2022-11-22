@@ -4,7 +4,7 @@
   <h1>Wann findet dein Brötle-Event statt?</h1>
 
   <div id="time-choose">
-    <input type="time" min="1" max="24">
+    <input type="time" min="1" max="24" v-model="new_event.startzeit.stunde">
   </div>
   <input type="date" id="date-input">
 
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-// import { new_event } from '../../new_event.js'
+import { new_event } from '../../new_event.js'
 import NavigationComponent from '@/components/NavigationComponent.vue';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
@@ -43,7 +43,7 @@ export default {
     name: 'Event_Erstellen_02View',
     data(){
     return{
-      // new_event
+      new_event
     }
   },
     components: {
