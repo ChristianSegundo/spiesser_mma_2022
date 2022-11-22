@@ -12,16 +12,15 @@ import { new_event } from '../../new_event.js'
 
 
 export default {
-  name: 'Event_Erstellen_03View',
-    data(){
-    return{
-      new_event
-    }
-  },
-
+  name: 'Event_Erstellen_03View', 
   components: {
-
+    
+  },
+  data(){
+  return{
+    new_event
   }
+},
 }
 </script>
 

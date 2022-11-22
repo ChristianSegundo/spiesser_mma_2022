@@ -7,6 +7,6 @@ export const new_event = reactive({
             datum: undefined,
             zusagedatum: undefined,
             ort: undefined,
-            mitbring_dinge: {},
+            mitbring_dinge: [],
             linkcode: undefined,
   })
