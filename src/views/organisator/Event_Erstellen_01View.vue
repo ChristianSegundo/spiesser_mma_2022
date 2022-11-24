@@ -1,7 +1,12 @@
 <template>
     <ProgressBarComponent></ProgressBarComponent>
   <div>
-    <h1>{{new_event.eventname}}</h1>
+    <p>Du organisierst:</p>
+    <!-- <h1>{{new_event.eventname}}</h1> -->
+
+    <h1 v-if="new_event.eventname === null  || new_event.eventname === undefined">Eventname</h1>
+
+    <h1 v-else>{{new_event.eventname}}</h1>
 
     <input type="text" placeholder="Wie heisst dein Brötle-Event?" v-model="new_event.eventname">
     <textarea type="text" placeholder="Beschreibe dein Brötle-Event" v-model="new_event.eventbeschreibung"></textarea>
