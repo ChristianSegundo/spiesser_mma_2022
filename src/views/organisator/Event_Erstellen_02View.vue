@@ -1,7 +1,6 @@
 <template>
   <ProgressBarComponent></ProgressBarComponent>
-  <p>{{new_event}}</p>
-  <h1>Wann findet dein Brötle-Event statt?</h1>
+  <h1>Wann findet {{new_event.eventname}} statt?</h1>
 
   <div id="time-choose">
     <input type="time" min="1" max="24" v-model="new_event.startzeit">

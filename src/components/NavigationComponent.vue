@@ -86,8 +86,10 @@
     bottom: 0;
     display: flex;
 	 align-items: center;
-   justify-content: space-evenly;
+   justify-content: space-around;
    width: inherit;
+   -webkit-box-shadow: 0px -8px 13px -2px rgba(0,0,0,0.28); 
+box-shadow: 0px -8px 13px -2px rgba(0,0,0,0.28);
 }
  .navbar__item {
 	 width: 70px;
