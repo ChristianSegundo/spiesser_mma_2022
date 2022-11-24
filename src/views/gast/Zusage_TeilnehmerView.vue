@@ -1,6 +1,7 @@
 <template>
   <h1>Anzahl Personen</h1>
 
+  <div>
   <div class="teilnehmer-zusage-alleine">
     <input type="radio" id="teilnehmer-allein" name="teilnehmer" value="teilnehmer-allein">
     <label for="teilnehmer-allein">Ich komme allein</label><br>
@@ -15,8 +16,9 @@
       Personen
     </label>
   </div>
-
   <router-link to='/gast/zusage-teilen' class="button-10 space-top">Weiter</router-link>
+
+</div>
 
 </template>
 
