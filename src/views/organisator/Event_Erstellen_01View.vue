@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { new_event } from '../../new_event.js'
+import { new_event } from '../../events/new_event.js'
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
 

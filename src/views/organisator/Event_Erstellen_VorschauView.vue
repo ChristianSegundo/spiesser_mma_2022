@@ -1,6 +1,9 @@
 <template>
   <ProgressBarComponent></ProgressBarComponent>
 
+<p>{{new_event}}</p>
+
+
 <h1 v-if="new_event.eventname !== undefined">{{new_event.eventname}}</h1>
 <h1 v-else>Eventname</h1>
 <h2>Vorschau</h2>
@@ -24,7 +27,7 @@
 </template>
 
 <script>
-import { new_event } from '../../new_event.js';
+import { new_event } from '../../events/new_event.js';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
 export default {
@@ -32,6 +35,7 @@ export default {
   components: {
     ProgressBarComponent: ProgressBarComponent
   },
+
   data(){
     return {new_event}
   }

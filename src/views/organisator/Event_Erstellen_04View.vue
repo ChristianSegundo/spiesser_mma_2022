@@ -27,7 +27,7 @@
 
 <script>
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
-import { new_event } from '../../new_event.js'
+import { new_event } from '../../events/new_event.js'
 
 export default {
   name: 'Event_Erstellen_04View',
