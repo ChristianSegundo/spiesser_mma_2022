@@ -9,29 +9,20 @@
 </template>
 
 <script>
-<<<<<<< Updated upstream
 import { new_event } from '../../events/new_event.js'
-=======
-import { new_event } from '../../new_event.js'
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
->>>>>>> Stashed changes
 
 
 export default {
   name: 'Event_Erstellen_03View', 
   components: {
-<<<<<<< Updated upstream
-    
+    ProgressBarComponent: ProgressBarComponent
   },
   data(){
-  return{
-    new_event
-=======
-    ProgressBarComponent: ProgressBarComponent
-
->>>>>>> Stashed changes
+    return{
+      new_event
+    }
   }
-},
 }
 </script>
 
