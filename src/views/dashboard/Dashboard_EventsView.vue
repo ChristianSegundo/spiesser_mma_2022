@@ -9,38 +9,19 @@
   </div>
   <div id="tabcontent">
     <div id="liste-events" role="tabpanel" aria-labelledby="link1" aria-hidden="false">
-      <table>
-        <tr>
-          <td>
-            MO<br>
-            16.06.
-          </td>
-          <td>
-            Eventname<br>
-            13:30 Uhr
-          </td>
-        </tr>
-        <tr>
-          <td>
-            FR<br>
-            20.06.
-          </td>
-          <td>
-            Eventname<br>
-            18:00 Uhr
-          </td>
-        </tr>
-        <tr>
-          <td>
-            SA<br>
-            21.06.
-          </td>
-          <td>
-            Eventname<br>
-            21:15 Uhr
-          </td>
-        </tr>
-      </table>
+
+<ul>
+
+<li v-for="event in alle_events">
+  <p>Event:{{event.eventname}}</p> <br>
+  <p>Zeit:{{event.startzeit}}</p> <br>
+  <p>Datum:{{event.eventdatum}}</p> <br>
+</li>
+
+
+</ul>
+
+
     </div>
     <div id="kalender-events" role="tabpanel" aria-labelledby="link2" aria-hidden="true" hidden> <!-- wenn Tab "Kalender" aktiviert, wird Inhalt angezeigt -->
     <h3>Kalender</h3>
@@ -58,7 +39,12 @@ export default {
   name: 'Dashboard_EventsView',
   components: {
     FirstComponent
+  },
+  computed:{
+    alle_events(){
+      return this.$store.state.alle_events
+    }
   }
-}
+  }
 </script>
 
