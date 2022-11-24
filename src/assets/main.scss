@@ -502,21 +502,46 @@ li {
     margin: 0 5px;
 }
 
-#tablist {
-    list-style: none;   
+.dashboard-event-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
-#tabcontent {
-    padding: 0 30px;
+.dashboard-event-inner .dashboard-event-inner-name {
+    width: 70%;
+    background-color: white;
+    text-align: left;
+    padding-left: 20px;
+    border-radius: 0 10px 10px 0;
 }
-#tabcontent .date-box-dashboard {
+
+.dashboard-event-outer {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    width: 300px;
+}
+
+.dashboard-event-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-event-inner-date {
     background-color: var(--darkgrey);
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    font-family: allotrope, sans-serif;
-    font-size: var(--infotext-size);
+    width: 30%;
+    position: relative;
+    border-radius: 10px 0 0 10px;
 }
-.date-box-bold {
-    font-size: var(--subline-size);
+
+.dashboard-event-inner-date p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

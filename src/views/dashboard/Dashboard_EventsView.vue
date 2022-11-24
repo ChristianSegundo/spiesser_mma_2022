@@ -9,21 +9,29 @@
   <div id="tabcontent">
     <div id="liste-events" role="tabpanel" aria-labelledby="link1" aria-hidden="false">
 
-<ul>
+      <ul class="dashboard-event-wrapper">
 
-<li v-for="event in alle_events">
-  <p>Event:{{event.eventname}}</p>
-  <p>Zeit:{{event.startzeit}}</p>
-  <p>Datum:{{event.eventdatum}}</p>
-</li>
+        <li v-for="event in alle_events" class="dashboard-event-outer">
+          <div class="dashboard-event-inner">
+            <div class="dashboard-event-inner-date">
+            <p>{{ event.eventdatum }}</p>
+          </div>
+            <div class="dashboard-event-inner-name">
+              <p>{{ event.eventname }}</p>
+              <p>{{ event.startzeit }} Uhr</p>
+            </div>
+
+          </div>
+        </li>
 
 
-</ul>
+      </ul>
 
 
     </div>
-    <div id="kalender-events" role="tabpanel" aria-labelledby="link2" aria-hidden="true" hidden> <!-- wenn Tab "Kalender" aktiviert, wird Inhalt angezeigt -->
-    <h3>Kalender</h3>
+    <div id="kalender-events" role="tabpanel" aria-labelledby="link2" aria-hidden="true" hidden>
+      <!-- wenn Tab "Kalender" aktiviert, wird Inhalt angezeigt -->
+      <h3>Kalender</h3>
       <p> (( Einbindung Kalender )) </p>
     </div>
   </div>
@@ -39,11 +47,11 @@ export default {
   components: {
     FirstComponent
   },
-  computed:{
-    alle_events(){
+  computed: {
+    alle_events() {
       return this.$store.state.alle_events
     }
   }
-  }
+}
 </script>
 
