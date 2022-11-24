@@ -6,9 +6,7 @@
   <div id="time-choose">
     <input type="time" min="1" max="24" v-model="new_event.startzeit">
   </div>
-  <input type="date" id="date-input">
-
-  <div>Kalenderplatzhalter</div>
+  <input type="date" id="date-input" v-model="new_event.eventdatum">
 
   <div id="zusage-toggle">
     <label class="content">
@@ -21,7 +19,7 @@
     <p>Zusage bis zum:</p>
   </div>
 
-  <input type="date" id="date-input-2" >
+  <input type="date" id="date-input-2" v-model="new_event.zusagedatum">
 
   <router-link to='/organisator/event-erstellen-03' class="button-10 space-top">Weiter</router-link>
 

@@ -51,9 +51,11 @@ export default {
   }
   
 }
- // mitbringsel:[{1},{2},{}]
+ 
+  // ------ Überlegungen Mitbring-Dinge ------
+  // mitbringsel:[{1},{2},{}]
 
   // 1 = {mitbringsel: "holz", user: "brenda"}
-  // 2 = {mitbringsel: "gascho", user}
+  // 2 = {mitbringsel: "gascho", user} --> user undefined
 </script>
 

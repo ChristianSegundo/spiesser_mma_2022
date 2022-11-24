@@ -6,7 +6,7 @@
 <h2>Vorschau</h2>
 
   <div class="preview-date">
-    <p v-if="new_event.datum !== undefined" id="date" >{{new_event.datum}}</p>
+    <p v-if="new_event.eventdatum !== undefined" id="date" >{{new_event.eventdatum}}</p>
     <p v-else id="date" >Kein Datum definiert</p>
    
     <p v-if="new_event.startzeit !== undefined" id="time">{{new_event.startzeit}}</p>
