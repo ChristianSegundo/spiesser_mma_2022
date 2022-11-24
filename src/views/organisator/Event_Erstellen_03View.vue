@@ -14,7 +14,6 @@ import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 
 
 export default {
-<<<<<<< Updated upstream
   name: 'Event_Erstellen_03View', 
   components: {
     ProgressBarComponent: ProgressBarComponent
@@ -25,23 +24,5 @@ export default {
     }
   }
 }
-=======
-  methods: {
-    
-    
-    },
-
-    name: 'Event_Erstellen_03View',
-    data(){
-    return{
-      new_event
-    }
-  },
-    components: {
-      ProgressBarComponent: ProgressBarComponent
-
-    }
-  }
->>>>>>> Stashed changes
 </script>
 
