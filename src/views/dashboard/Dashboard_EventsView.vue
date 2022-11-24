@@ -13,9 +13,9 @@
 <ul>
 
 <li v-for="event in alle_events">
-  <p>Event:{{event.eventname}}</p> <br>
-  <p>Zeit:{{event.startzeit}}</p> <br>
-  <p>Datum:{{event.eventdatum}}</p> <br>
+  <p>Event:{{event.eventname}}</p>
+  <p>Zeit:{{event.startzeit}}</p>
+  <p>Datum:{{event.eventdatum}}</p>
 </li>
 
 
