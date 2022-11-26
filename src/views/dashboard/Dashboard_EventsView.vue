@@ -12,7 +12,7 @@
 
       <ul class="dashboard-event-wrapper">
 
-        <li v-for="event in get_sorted_events" class="dashboard-event-outer">
+        <li v-for="event in get_sorted_events" class="dashboard-event-outer" @click="linkto(event.id)">
           <div class="dashboard-event-inner">
             <div class="dashboard-event-inner-date">
             <p>{{ event.eventdatum }}</p>
@@ -20,7 +20,6 @@
             <div class="dashboard-event-inner-name">
               <p>{{ event.eventname }}</p>
               <p>{{ event.startzeit }} Uhr</p>
-              <router-link :to="'/dashboard/event-details/' + event.id" >Details</router-link>
             </div>
 
           </div>
@@ -49,6 +48,11 @@ export default {
   name: 'Dashboard_EventsView',
   components: {
     FirstComponent
+  },
+  methods:{
+    linkto(ID){
+      this.$router.push("/dashboard/event-details/" + ID)
+    }
   },
   computed:{
     alle_events() {
