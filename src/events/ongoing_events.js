@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 const event1 ={
         // ID? von DB
-        // Zeit wird mit Smartphone Zeit verglich für Auflistung nach Aktualität
+        id: "345102",
         eventname: "Grillfescht",
         eventbeschreibung: "Wir grillen am See",
         startzeit: "18:00",
@@ -15,7 +15,7 @@ const event1 ={
 
 const event2 ={
         // ID? von DB
-        // Zeit wird mit Smartphone Zeit verglich für Auflistung nach Aktualität
+        id: "247848",
         eventname: "BBQ",
         eventbeschreibung: "Im Wald grillieren",
         startzeit: "16:00",
@@ -28,7 +28,7 @@ const event2 ={
 
 const event3 ={
         // ID? von DB
-        // Zeit wird mit Smartphone Zeit verglich für Auflistung nach Aktualität
+        id: "216598",
         eventname: "Geburiparty",
         eventbeschreibung: "Wir grillen im Garten",
         startzeit: "20:00",
@@ -38,14 +38,37 @@ const event3 ={
         mitbring_dinge: [{"Grillkohle": false}, {"Geburtstagskucheb": false}],
         linkcode: "EFG",
 }
-const alle_events =[event1, event2, event3]
+const alle_events = [event1, event2, event3]
 
 export default createStore({
         state: {
               alle_events
         },
         getters: {
-        },
+                get_alle_events(state){
+                        return state.alle_events
+                }, // END get_alle_events
+                get_anzahl_events(state, getters){                    
+                        return getters.get_alle_events.length
+                },
+                get_eventbyID: (state) => (id) =>{  
+                       return state.alle_events.find((event)=> event.id == id)
+                },
+                get_sorted_events(state){
+                        var alle_events = state.alle_events;
+                        var sorted_events = alle_events.sort(compare_timestamps);
+                        return sorted_events;
+
+                        function compare_timestamps(event1, event2){
+                                var date_string1 = event1.eventdatum + "T" + event1.startzeit + ":00+01:00";
+                                var date_string2 = event2.eventdatum + "T" + event2.startzeit + ":00+01:00";
+                                var date_timestamp1 = Date.parse(date_string1);
+                                var date_timestamp2 = Date.parse(date_string2);
+                                return date_timestamp1 - date_timestamp2;
+                        }
+                },
+
+        }, // END getters
         mutations: {
         },
         actions: {

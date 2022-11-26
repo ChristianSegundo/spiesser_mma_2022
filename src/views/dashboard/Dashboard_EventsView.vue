@@ -9,9 +9,10 @@
   <div id="tabcontent">
     <div id="liste-events" role="tabpanel" aria-labelledby="link1" aria-hidden="false">
 
+
       <ul class="dashboard-event-wrapper">
 
-        <li v-for="event in alle_events" class="dashboard-event-outer">
+        <li v-for="event in get_sorted_events" class="dashboard-event-outer">
           <div class="dashboard-event-inner">
             <div class="dashboard-event-inner-date">
             <p>{{ event.eventdatum }}</p>
@@ -19,6 +20,7 @@
             <div class="dashboard-event-inner-name">
               <p>{{ event.eventname }}</p>
               <p>{{ event.startzeit }} Uhr</p>
+              <router-link :to="'/dashboard/event-details/' + event.id" >Details</router-link>
             </div>
 
           </div>
@@ -35,7 +37,8 @@
       <p> (( Einbindung Kalender )) </p>
     </div>
   </div>
-  <router-link to='/dashboard/event-uebersicht'>Event_UebersichtView</router-link>
+
+  
 </template>
 
 <script>
@@ -47,9 +50,15 @@ export default {
   components: {
     FirstComponent
   },
-  computed: {
+  computed:{
     alle_events() {
-      return this.$store.state.alle_events
+      return this.$store.getters.get_alle_events
+    },
+    anzahl() {
+      return this.$store.getters.get_anzahl_events
+    },
+    get_sorted_events() {
+      return this.$store.getters.get_sorted_events
     }
   }
 }

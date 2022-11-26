@@ -1,11 +1,11 @@
 <template>
   <h1>Event_UebersichtView - Spiesser</h1>
-  <h2>Eventname</h2>
+  <h2>{{event.eventname}}</h2>
   <p>Vorschau</p>
-  <p>MO 16. Juni 2020</p>
-  <p>13:30 Uhr</p>
+  <p>{{event.eventdatum}}</p>
+  <p>{{event.startzeit}}</p>
   <p> -- Google Maps Einbindung -- </p>
-  <p>Gerne lade ich euch zur Abschlussfeier meines Bachelors ein. Dieser findet in New-York statt und „bröötlet“ zusammen.</p>
+  <p>{{event.eventbeschreibung}}</p>
   <a href="/gast/zusage-teilen">
     <button>Gäste einladen</button>
   </a><br>
@@ -22,6 +22,16 @@ export default {
   name: 'Event_UebersichtView',
   components: {
     FirstComponent
+  },
+  data(){
+    return{
+      ID: this.$route.params.id
+    }
+  },
+  computed:{
+    event(){
+      return this.$store.getters.get_eventbyID(this.ID)
+    }
   }
 }
 </script>

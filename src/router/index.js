@@ -29,7 +29,7 @@ import Zusage_TeilnehmerView from '../views/gast/Zusage_TeilnehmerView.vue'
 import Dashboard_EventsView from '../views/dashboard/Dashboard_EventsView.vue'
 import Event_Mitbring_DingeView from '../views/dashboard/Event_Mitbring_DingeView.vue'
 import Event_MonitoringView from '../views/dashboard/Event_MonitoringView.vue'
-import Event_UebersichtView from '../views/dashboard/Event_UebersichtView.vue'
+import Event_DetailView from '../views/dashboard/Event_DetailView.vue'
 
 // IMPORT PROFIL VIEWS (views/profil):
 import Profil_Angaben_AendernView from '../views/profil/Profil_Angaben_AendernView.vue'
@@ -157,9 +157,9 @@ const routes = [
       component: Event_MonitoringView
     },
     {
-      path: '/dashboard/events',
-      name: 'Event_UebersichtView',
-      component: Event_UebersichtView
+      path: '/dashboard/event-details/:id',
+      name: 'Event_DetailView',
+      component: Event_DetailView
     },
   //  END DASHBOARD VIEWS (views/dashboard)
   //  START PROFIL VIEWS (views/profil)
