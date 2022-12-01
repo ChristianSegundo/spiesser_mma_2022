@@ -1,17 +1,17 @@
 <template>
-  <h1>Event_UebersichtView - Spiesser</h1>
-  <h2>{{event.eventname}}</h2>
+  <h1>{{event.eventname}}</h1>
   <p>Vorschau</p>
-  <p>{{event.eventdatum}}</p>
-  <p>{{event.startzeit}}</p>
-  <p> -- Google Maps Einbindung -- </p>
-  <p>{{event.eventbeschreibung}}</p>
-  <a href="/gast/zusage-teilen">
-    <button>Gäste einladen</button>
-  </a><br>
-  <a href="/dashboard/event-monitoring">
-    <button>Zum Monitoring</button>
-  </a>
+
+  <div class="preview-date">
+    <p id="date">{{event.eventdatum}}</p>
+    <p id="time">{{event.startzeit}} Uhr</p>
+  </div>
+
+  <div class="preview-map">Maps-Platzhalter</div>
+  <p class="preview-text">{{event.eventbeschreibung}}</p>
+
+  <router-link to='/gast/zusage-teilen' class="button-10 space-top">Gäste einladen</router-link>
+  <router-link to='/dashboard/event-monitoring' class="button-10 space-top space-bottom invert-button">Zum Monitoring</router-link>
 </template>
 
 <script>

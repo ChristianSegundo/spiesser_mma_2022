@@ -545,3 +545,40 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.dashboard-event-inner-name .dashboard-eventname  {
+    font-weight: bold;
+    font-size: var(--subline-size);
+    margin-bottom: 0px;
+}
+.dashboard-event-inner-name .dashboard-eventstartzeit  {
+    margin-top: 5px;
+}
+#tablist li{
+    list-style: none;
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 5px 16px;
+    font-family: bahnschrift;
+    font-size: var(--subline-size);
+    color: #919191;
+}
+#tablist li:hover{
+    border: solid black;
+    border-width: 0 0 2px 0;
+    color: black;
+}
+#tablist li:active{
+    border: solid black;
+    border-width: 0 0 2px 0;
+    color: black;
+}
+#tablist {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#tabpanel{
+    width: 220px;
+}

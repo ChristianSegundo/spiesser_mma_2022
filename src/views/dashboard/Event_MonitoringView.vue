@@ -1,6 +1,8 @@
 <template>
-  <h1>Event_MonitoringView - Spiesser</h1>
-  <h2>Monitoring</h2>
+  <h1>Monitoring</h1>
+	<div class="piechart"></div>
+
+  
   <div> (( Kreisgrafik Teilnehmer ))</div>
   <p>Teilnahmen</p>
   <p>
@@ -13,6 +15,21 @@
   
 </template>
 
+<style scoped>
+	.piechart {
+		margin-top: 300px;
+		display: block;
+		position: absolute;
+		width: 400px;
+		height: 400px;
+		border-radius: 50%;
+		background-image: conic-gradient(
+			pink 70deg,
+			lightblue 0 235deg,
+			orange 0);
+	}
+
+</style>
 <script>
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
