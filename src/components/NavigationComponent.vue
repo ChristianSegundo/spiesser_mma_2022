@@ -1,7 +1,7 @@
 <template>
         <div class="wrapper"><div class="navbar">
 
-<router-link to='/organisator/event-erstellen-01'>
+<router-link to='/dashboard/dashboard-events'>
 
         <div class="navbar__item -blue">
             <span class="navbar__icon">
