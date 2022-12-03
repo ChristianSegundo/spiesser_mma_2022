@@ -5,7 +5,11 @@
 
   <div class="mitbringliste">
     <ul>
-      <li v-for="dingsel in mitbringseldinge">{{dingsel}}</li>
+      <li v-for="dingsel in mitbringseldinge">
+        
+        <div>{{dingsel}}</div>
+        <div @click="remove_ding(dingsel)">X</div>
+      </li>
     </ul>
   </div>
   <!-- <input type="text" class="mitbringliste-input" placeholder="2 Gascho Bier"> -->
@@ -45,8 +49,11 @@ export default {
   methods:{
     push_ding(){
       this.mitbringseldinge.push(this.aktuelles_dingsel);
-      aktuelles_dingsel = "";
-      new_event.mitbring_dinge = mitbringseldinge;
+      new_event.mitbring_dinge = this.mitbringseldinge;
+    },
+    remove_ding(ding2remove){
+      this.mitbringseldinge = this.mitbringseldinge.filter(mitbringsel => mitbringsel !== ding2remove)
+      new_event.mitbring_dinge = this.mitbringseldinge;
     }
   }
   
@@ -56,6 +63,6 @@ export default {
   // mitbringsel:[{1},{2},{}]
 
   // 1 = {mitbringsel: "holz", user: "brenda"}
-  // 2 = {mitbringsel: "gascho", user} --> user undefined
+  // 2 = {mitbringsel: "gascho", user} --> user false
 </script>
 
