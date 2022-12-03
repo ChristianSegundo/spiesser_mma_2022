@@ -35,9 +35,11 @@ const event3 ={
         eventdatum: "2023-05-12",
         zusagedatum: "2023-03-31",
         ort: "Zuhause im Garten",
-        mitbring_dinge: [{"Grillkohle": false}, {"Geburtstagskucheb": false}],
+        mitbring_dinge: [{"Grillkohle": false}, {"Geburtstagskuchen": false}],
         linkcode: "EFG",
 }
+
+
 const alle_events = [event1, event2, event3]
 
 export default createStore({
