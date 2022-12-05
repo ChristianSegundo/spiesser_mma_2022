@@ -17,15 +17,12 @@
 
 <style scoped>
 	.piechart {
-		margin-top: 300px;
-		display: block;
-		position: absolute;
-		width: 400px;
-		height: 400px;
+		width: 300px;
+		height: 300px;
 		border-radius: 50%;
 		background-image: conic-gradient(
-			pink 70deg,
-			orange 0);
+			black 20deg,
+			#d1d1d1 0);
 	}
 
 </style>
