@@ -25,7 +25,6 @@
 		border-radius: 50%;
 		background-image: conic-gradient(
 			pink 70deg,
-			lightblue 0 235deg,
 			orange 0);
 	}
 
