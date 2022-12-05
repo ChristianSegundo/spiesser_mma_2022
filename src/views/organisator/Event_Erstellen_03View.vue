@@ -3,7 +3,7 @@
 
   <h1>Location</h1>
   <input type="text" placeholder="Wo findet das Brötle-Event statt?" v-model="new_event.ort">
-    <div>Maps-Platzhalter</div>
+  <MapsComponent></MapsComponent>
     <router-link to='/organisator/event-erstellen-04' class="button-10 space-top">Weiter</router-link>
 
 </template>
@@ -11,12 +11,16 @@
 <script>
 import { new_event } from '../../events/new_event.js'
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
+import MapsComponent from '@/components/MapsComponent.vue';
+
 
 
 export default {
   name: 'Event_Erstellen_03View', 
   components: {
-    ProgressBarComponent: ProgressBarComponent
+    ProgressBarComponent: ProgressBarComponent,
+    MapsComponent
+
   },
   data(){
     return{

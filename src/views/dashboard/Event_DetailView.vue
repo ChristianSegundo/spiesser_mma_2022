@@ -7,7 +7,8 @@
     <p id="time">{{event.startzeit}} Uhr</p>
   </div>
 
-  <div class="preview-map">Maps-Platzhalter</div>
+  <MapsComponent></MapsComponent>
+
   <p class="preview-text">{{event.eventbeschreibung}}</p>
 
   <router-link to='/gast/zusage-teilen' class="button-10 space-top">Gäste einladen</router-link>
@@ -17,12 +18,14 @@
 <script>
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
+import MapsComponent from '@/components/MapsComponent.vue';
 
 export default {
   name: 'Event_UebersichtView',
   components: {
-    FirstComponent
-  },
+    FirstComponent,
+    MapsComponent,MapsComponent
+},
   data(){
     return{
       ID: this.$route.params.id

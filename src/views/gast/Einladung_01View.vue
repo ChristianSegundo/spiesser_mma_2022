@@ -5,7 +5,7 @@
     <p id="time">13:30 Uhr</p>
   </div>
 
-  <div class="preview-map">Maps-Platzhalter</div>
+  <MapsComponent></MapsComponent>
 
   <p class="preview-text">Gerne lade ich euch zur Abschlussfeier meines Bachelors ein. Dieser findet in New-York statt
     und „bröötlet“ zusammen.</p>
@@ -42,11 +42,15 @@
 <script>
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
+import MapsComponent from '@/components/MapsComponent.vue';
+
 
 export default {
   name: 'Einladung_01View',
   components: {
-    FirstComponent
+    FirstComponent,
+    MapsComponent: MapsComponent
+
   }
 }
 </script>

@@ -23,7 +23,7 @@
         </div>
     </router-link>
 
-    <router-link to='/organisator/event-erstellen-01'>    
+    <router-link to='/profil/profil'>    
         <div class="navbar__item -blue">
             <span class="navbar__icon">
                 <svg class="icon">

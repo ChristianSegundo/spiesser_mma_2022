@@ -16,7 +16,7 @@
     <p v-else id="time" >Keine Zeit definiert</p>
   </div>
 
-  <div class="preview-map">Maps-Platzhalter</div>
+  <MapsComponent></MapsComponent>
 
   <p v-if="new_event.eventbeschreibung !== undefined" class="preview-text">{{new_event.eventbeschreibung}}</p>
   <p v-else class="preview-text" >Keine Beschreibung definiert</p>
@@ -29,11 +29,14 @@
 <script>
 import { new_event } from '../../events/new_event.js';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
+import MapsComponent from '@/components/MapsComponent.vue';
+
 
 export default {
   name: 'Event_Erstellen_VorschauView',
   components: {
-    ProgressBarComponent: ProgressBarComponent
+    ProgressBarComponent: ProgressBarComponent,
+    MapsComponent: MapsComponent
   },
 
   data(){

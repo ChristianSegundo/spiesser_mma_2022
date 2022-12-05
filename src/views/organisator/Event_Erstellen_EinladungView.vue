@@ -1,10 +1,16 @@
 <template>
   <ProgressBarComponent></ProgressBarComponent>
   <h1>Lade deine Gäste ein!</h1>
-  <input type="text" placeholder="spiesser.ch/event-xyz33">
+  <input 
+  v-on:focus="$event.target.select()" 
+  ref="clone" 
+  readonly
+  :value="text"
+  type="text" 
+  placeholder="spiesser.ch/event-xyz33">
 
   <div class="event-invite-buttons">
-    <button class="button-10 space-top button-5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <button class="button-10 space-top button-5" @click="copy" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
         <path
           d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z" />
@@ -28,7 +34,18 @@ export default {
   name: 'Event_Erstellen_EinladungView',
   components: {
     ProgressBarComponent : ProgressBarComponent
-  }
+  },
+  data() {
+    return {
+      text: 'spiesser.ch/event-xyz33',
+    };
+  },
+  methods: {
+    copy() {
+      this.$refs.clone.focus();
+      document.execCommand('copy');
+    }
+  },
 }
 </script>
 
