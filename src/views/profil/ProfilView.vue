@@ -8,8 +8,8 @@
 
   <p>Deine Organisator-Statistik:</p>
 
-  <table class="tableeventswrapper">
-    <tr>
+  <table>
+    <tr class="tableeventswrapper">
       <td class="tableeventshalf">
         4<br>
         Events
@@ -19,13 +19,19 @@
         Locations
       </td>
     </tr>
-    <tr id="tableeventsfull">
-      <td class="tableeventshalf" style="width: 340px;">
+  </table>
+
+  <table>
+    <tr class="tableeventswrapper">
+      <td class="tableeventsfull" style="width: 340px;">
         107<br>
         Mitbring-Dinge
       </td>
     </tr>
   </table>
+
+
+
 </template>
 
 <script>
@@ -41,10 +47,11 @@ export default {
 </script>
 
 <style scoped>
-table.tableeventswrapper {
-    width: 340px;
+.tableeventswrapper {
+  width: 340px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
 }
 td.tableeventshalf {
     background: white;
@@ -53,6 +60,8 @@ td.tableeventshalf {
     padding: 25px;
     font-family: bahnschrift;
     font-size: 16px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+
 }
 td.tableeventshalf::first-line {
     background: white;
@@ -60,11 +69,22 @@ td.tableeventshalf::first-line {
     border-radius: 15px;
     padding: 25px;
     font-family: bahnschrift;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 }
-#tableeventsfull{
-    width: 100% !important;
+.tableeventsfull{
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    font-family: bahnschrift;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+
+}
+.tableeventsfull::first-line{
+    font-size: 30px;
+
 }
 </style>
 

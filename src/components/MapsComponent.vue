@@ -85,6 +85,9 @@
           position: place.geometry.location,
         })
       );
+
+      console.log("marker " + markers.length + " name=" + place.name + " coordinates=" + place.geometry.location.toUrlValue(6) + ", latitude=" + place.geometry.location.lat() + ", longitude=" + place.geometry.location.lng());
+
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
         bounds.union(place.geometry.viewport);
@@ -108,7 +111,7 @@ window.initAutocomplete = initAutocomplete;
   }
   </script>
   
-  <style scoped>
+  <style >
 /**
  * @license
  * Copyright 2019 Google LLC. All Rights Reserved.
@@ -209,7 +212,7 @@ window.initAutocomplete = initAutocomplete;
     margin: 15px 0;
 }
 .gmnoprint {
-  display: none;
+  display: none !important;
 }
 
 
