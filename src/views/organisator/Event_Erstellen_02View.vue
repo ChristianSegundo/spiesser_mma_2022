@@ -5,13 +5,16 @@
   <div id="time-choose">
     <input type="time" min="1" max="24" v-model="new_event.startzeit">
   </div>
-  <input type="date" id="date-input" v-model="new_event.eventdatum">
+  <div id="kalenderanzeige">
+    <vc-date-picker v-model="new_event.eventdatum" />
+    <!-- <input type="date" id="date-input-1" v-model="new_event.eventdatum"> -->
+  </div>
 
   <div id="zusage-toggle">
     <label class="content">
-      <input type="checkbox" style="display:none" id="toggle-button" />
+      <input type="checkbox" style="display:none"  />
       <div class="toggle">
-        <div class="btn"></div>
+        <div class="btn ui button toggle" id="toggle-button" @click="isActive = !isActive"></div>
       </div>
     </label>
 
@@ -28,22 +31,24 @@
 <script>
 import { new_event } from '../../events/new_event.js'
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
+import 'v-calendar/dist/style.css'
 
 export default {
   methods: {
-    
-    
+    toggle() {
+    this.isActive = !this.enable;
     },
-
-    name: 'Event_Erstellen_02View',
-    data(){
-    return{
-      new_event
-    }
   },
-    components: {
-      ProgressBarComponent: ProgressBarComponent
 
-    }
+  name: 'Event_Erstellen_02View',
+    data(){
+      return{
+        new_event,
+        isActive: false,
+      };
+  },
+  components: {
+      ProgressBarComponent: ProgressBarComponent
   }
+}
 </script>
