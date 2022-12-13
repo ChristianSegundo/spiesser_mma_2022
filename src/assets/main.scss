@@ -89,7 +89,7 @@ figure {
     font-stretch: condensed;
     color: #1f1f1f;
     padding: 0 25px;
-    text-align: left;
+    text-align: center;
 }
 
 .logo-header {
@@ -154,13 +154,13 @@ textarea {
     font-weight: 700;
 }
 
-#date-input,
-#date-input-2 {
-    border: none;
-    padding: 10px;
-    background: white;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
-}
+// #date-input,
+// #date-input-2 {
+//     border: none;
+//     padding: 10px;
+//     background: white;
+//     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+// }
 
 .textarea {
     display: block;
@@ -259,16 +259,32 @@ textarea {
 .mitbringliste li {
     font-weight: 700;
     font-family: allotrope, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     list-style: none;
-    padding: 16px 0;
+    // padding: 16px 0;
     border-bottom: #2F2D2E 1px solid;
+    display: flex;
+    justify-content: space-between;
+    color: var(--orange);
+    align-items: center;
+
+}
+.mitbringliste #dingsel-titel {
+    width: 80%;
+    padding: 10px;
+}
+.mitbringliste #delete-dingsel {
+    width: 20%;
+    text-align: center;
+}
+#delete-dingsel svg{
+    width: 28px;
 }
 
 .mitbringliste ul,
 li {
-    width: 300px;
+    width: 340px;
     margin: 0 auto;
     padding: 0;
 }
@@ -581,4 +597,7 @@ li {
 }
 #tabpanel{
     width: 220px;
+}
+.vc-container {
+width: 350px;
 }

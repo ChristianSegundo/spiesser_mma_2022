@@ -6,7 +6,7 @@
     <input type="time" min="1" max="24" v-model="new_event.startzeit">
   </div>
   <div id="kalenderanzeige">
-    <vc-date-picker v-model="new_event.eventdatum" />
+    <vc-date-picker color="orange" id="date-input-1" v-model="new_event.eventdatum" />
     <!-- <input type="date" id="date-input-1" v-model="new_event.eventdatum"> -->
   </div>
 
@@ -14,14 +14,16 @@
     <label class="content">
       <input type="checkbox" style="display:none"  />
       <div class="toggle">
-        <div class="btn ui button toggle" id="toggle-button" @click="isActive = !isActive"></div>
+        <div class="btn ui button toggle" id="toggle-button" @click="isActive = !isActive; toggle = !toggle"></div>
       </div>
     </label>
 
     <p>Zusage bis zum:</p>
   </div>
 
-  <input type="date" id="date-input-2" v-model="new_event.zusagedatum">
+  <vc-date-picker v-show='toggle' color="orange" id="date-input-2" v-model="new_event.zusagedatum" />
+
+  <!-- <input type="date" id="date-input-2" v-model="new_event.zusagedatum"> -->
 
   <router-link to='/organisator/event-erstellen-03' class="button-10 space-top">Weiter</router-link>
 
@@ -45,6 +47,7 @@ export default {
       return{
         new_event,
         isActive: false,
+        toggle: false,
       };
   },
   components: {

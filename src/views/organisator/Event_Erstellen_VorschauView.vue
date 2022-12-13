@@ -23,7 +23,6 @@
   <router-link to='/organisator/event-erstellen-einladung' class="button-10 space-top">Gäste einladen</router-link>
   <button class="button-10 space-top">Zum Kalender hinzufügen</button>
 
-
 </template>
 
 <script>
@@ -38,7 +37,6 @@ export default {
     ProgressBarComponent: ProgressBarComponent,
     MapsComponent: MapsComponent
   },
-
   data(){
     return {new_event}
   }

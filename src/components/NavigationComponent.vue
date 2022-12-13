@@ -90,6 +90,7 @@
    width: inherit;
    -webkit-box-shadow: 0px -8px 13px -2px rgba(0,0,0,0.28); 
 box-shadow: 0px -8px 13px -2px rgba(0,0,0,0.28);
+z-index: 999;
 }
  .navbar__item {
 	 width: 70px;
