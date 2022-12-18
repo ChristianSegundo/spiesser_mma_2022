@@ -77,24 +77,24 @@
     margin-right: auto;
 }
  .navbar {
-	 background: #fdfdfd;
-	 padding: 10px 20px 15px;
-	 box-shadow: 0px 20px 40px rgba(18, 34, 64, 0.1);
-	 border-bottom-left-radius: 30px;
-	 border-bottom-right-radius: 30px;
-     position: fixed;
+  background: #fdfdfd;
+    padding: 10px 10px 10px;
+    box-shadow: 0px 20px 40px rgb(18 34 64 / 10%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: fixed;
     bottom: 0;
     display: flex;
-	 align-items: center;
-   justify-content: space-around;
-   width: inherit;
-   -webkit-box-shadow: 0px -8px 13px -2px rgba(0,0,0,0.28); 
-box-shadow: 0px -8px 13px -2px rgba(0,0,0,0.28);
-z-index: 999;
+    box-shadow: 0px -8px 13px -2px rgb(0 0 0 / 28%);
+    z-index: 999;
+    justify-content: space-around;
+    flex-direction: row;
+    /* margin: 10px; */
+    width: -webkit-fill-available;
 }
  .navbar__item {
-	 width: 70px;
-	 height: 70px;
+	 width: 50px;
+	 height: 50px;
 	 position: relative;
 	 cursor: pointer;
 	 padding: 10px;

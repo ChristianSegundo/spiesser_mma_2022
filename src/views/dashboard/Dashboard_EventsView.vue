@@ -44,7 +44,8 @@
     <div id="kalender-events" role="tabpanel" aria-labelledby="link2" >
       <!-- wenn Tab "Kalender" aktiviert, wird Inhalt angezeigt -->
       <h3>Kalender</h3>
-      <p> (( Einbindung Kalender )) </p>
+      <vc-date-picker color="orange" id="date-input-1" />
+
     </div>
   </div>
 </div>
@@ -77,7 +78,6 @@
 
 .tabs__content {
   order: 1;
-  width: 300px;
   display: none;
 }
 
@@ -96,6 +96,7 @@
 <script>
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
+import 'v-calendar/dist/style.css'
 
 export default {
   name: 'Dashboard_EventsView',

@@ -3,16 +3,16 @@
 
   <div>
   <div class="teilnehmer-zusage-alleine">
-    <input type="radio" id="teilnehmer-allein" name="teilnehmer" value="teilnehmer-allein">
+    <input type="radio" id="teilnehmer-allein" name="teilnehmer" value="teilnehmer-allein" checked>
     <label for="teilnehmer-allein">Ich komme allein</label><br>
   </div>
 
   <div class="teilnehmer-zusage-gruppe">
-    <input type="radio" id="teilnehmer-mehrere" name="teilnehmer" value="teilnehmer-mehrere">
+    <input type="radio" id="teilnehmer-mehrere" name="teilnehmer" value="teilnehmer-mehrere" >
     <label for="teilnehmer-mehrere">
 
       Wir sind
-      <input type="number" id="teilnehmer-zahl" name="teilnehmer-zahl" min="2" max="20" required>
+      <input type="number" id="teilnehmer-zahl" name="teilnehmer-zahl" min="2" max="20" pattern="\d*" required>
       Personen
     </label>
   </div>

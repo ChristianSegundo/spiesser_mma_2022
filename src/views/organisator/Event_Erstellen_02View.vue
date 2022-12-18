@@ -3,7 +3,7 @@
   <h1>Wann findet {{new_event.eventname}} statt?</h1>
 
   <div id="time-choose">
-    <input type="time" min="1" max="24" v-model="new_event.startzeit">
+    <input type="time" min="1" max="24"  class="input-time" v-model="new_event.startzeit">
   </div>
   <div id="kalenderanzeige">
     <vc-date-picker color="orange" id="date-input-1" v-model="new_event.eventdatum" />

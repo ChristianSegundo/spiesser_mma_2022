@@ -279,7 +279,7 @@ textarea {
     text-align: center;
 }
 #delete-dingsel svg{
-    width: 28px;
+    width: 22px;
 }
 
 .mitbringliste ul,
@@ -321,10 +321,12 @@ li {
     width: 20%;
     border: solid #2F2D2E;
     border-width: 0 0 1px 0;
+    background-color: transparent;
+margin: 0;
 }
 
 .mitbringliste-input svg {
-    width: 50%;
+    width: 22px;
     background-color: #f1f1f1;
     border: none;
     fill: #C93F08;
@@ -333,7 +335,7 @@ li {
 
 .mitbringliste-input svg:hover {
     fill: #2F2D2E;
-    width: 55%;
+    width: 22px;
 }
 
 .preview-date {
@@ -514,7 +516,6 @@ li {
 .teilnehmer-zusage-gruppe #teilnehmer-zahl {
     width: 50px;
     padding-right: 0;
-    text-align: center;
     margin: 0 5px;
 }
 
@@ -600,4 +601,11 @@ li {
 }
 .vc-container {
 width: 350px;
+}
+.input-time:before {
+    content: '13:00 Uhr';
+    text-align: center;
+
+}.input-time:focus:before {
+    content: '';
 }

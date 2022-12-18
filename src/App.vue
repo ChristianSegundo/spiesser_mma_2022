@@ -1,7 +1,8 @@
 <template>
   <!-- Zeigt aktuelle Componente an: -->
-  <router-view/>
+  <router-view />
   <NavigationComponent></NavigationComponent>
+
 
 </template>
 
