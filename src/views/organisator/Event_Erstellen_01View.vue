@@ -18,8 +18,8 @@
 
     <h1 v-else>{{ new_event.eventname }}</h1>
 
-    <input type="text" placeholder="Wie heisst dein Brötle-Event?" v-model="new_event.eventname">
-    <textarea type="text" placeholder="Beschreibe dein Brötle-Event" v-model="new_event.eventbeschreibung"></textarea>
+    <input type="text" placeholder="Wie heisst dein Brötle-Event?" v-model="new_event.eventname" required>
+    <textarea type="text" placeholder="Beschreibe dein Brötle-Event" v-model="new_event.eventbeschreibung" required></textarea>
   </div>
   <router-link to='/organisator/event-erstellen-02' class="button-10 space-top">Weiter</router-link>
 
