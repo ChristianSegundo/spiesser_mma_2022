@@ -31,17 +31,16 @@
 </template>
 
 <script>
-import { new_event } from '../../events/new_event.js'
+import { new_event } from '../../events/new_event.js';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
-import 'v-calendar/dist/style.css'
+import 'v-calendar/dist/style.css';
 
 export default {
   methods: {
     toggle() {
     this.isActive = !this.enable;
-    },
+    }
   },
-
   name: 'Event_Erstellen_02View',
     data(){
       return{
