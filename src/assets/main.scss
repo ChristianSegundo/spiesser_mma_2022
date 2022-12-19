@@ -656,3 +656,26 @@ input[type=time] {
   .header-items svg {
     width: 20px;
   }
+  .header-items-2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    float: left;
+  }
+  .header-items-2 svg {
+    width: 20px;
+  }
+  .teilnahmen-wrapper {
+    text-align: left;
+    width: 340px;
+  }
+  .teilnahmen-wrapper li {
+    list-style: none;
+    font-family: bahnschrift;
+    font-weight: 300;
+  }
+  .teilnahmen-wrapper ul {
+    padding: 0;
+  }

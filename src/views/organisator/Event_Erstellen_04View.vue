@@ -8,7 +8,8 @@
       </svg>
     </router-link>
     <ProgressBarComponent></ProgressBarComponent>
-  </div>  <h1>Was dürfen deine Gäste mitbringen?</h1>
+  </div>  
+  <h1>Was dürfen deine Gäste mitbringen?</h1>
   <h2>Mitbring-Dinge hinzufügen</h2>
 
   <div class="mitbringliste">
