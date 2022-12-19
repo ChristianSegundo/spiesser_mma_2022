@@ -1,16 +1,22 @@
 <template>
-  <ProgressBarComponent></ProgressBarComponent>
+  <div class="header-items">
+    <router-link to='/organisator/event-erstellen-vorschau' class="goback-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <path
+          d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      </svg>
+    </router-link>
+    <ProgressBarComponent></ProgressBarComponent>
+  </div>
+
   <h1>Lade deine Gäste ein!</h1>
-  <input 
-  v-on:focus="$event.target.select()" 
-  ref="clone" 
-  readonly
-  :value="text"
-  type="text" 
-  placeholder="spiesser.ch/event-xyz33">
+  <input v-on:focus="$event.target.select()" ref="clone" readonly :value="text" type="text"
+    placeholder="spiesser.ch/event-xyz33">
 
   <div class="event-invite-buttons">
-    <button class="button-10 space-top button-5" v-on:click="copy(); toggle = !toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <button class="button-10 space-top button-5" v-on:click="copy(); toggle = !toggle"><svg
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
         <path
           d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z" />
@@ -33,7 +39,7 @@ import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 export default {
   name: 'Event_Erstellen_EinladungView',
   components: {
-    ProgressBarComponent : ProgressBarComponent
+    ProgressBarComponent: ProgressBarComponent
   },
   data() {
     return {

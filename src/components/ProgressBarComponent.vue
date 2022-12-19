@@ -33,7 +33,7 @@
   <style scoped>
   .container {
     text-align: center;
-    width: 90%;
+    width: 75%;
     margin-top: 30px;
 }
 
