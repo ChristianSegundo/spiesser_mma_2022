@@ -1,5 +1,14 @@
   <template>
-  <ProgressBarComponent></ProgressBarComponent>
+<div class="header-items">
+    <router-link to='/organisator/event-erstellen-03' class="goback-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <path
+          d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      </svg>
+    </router-link>
+    <ProgressBarComponent></ProgressBarComponent>
+  </div>  
   <h1>Was dürfen deine Gäste mitbringen?</h1>
   <h2>Mitbring-Dinge hinzufügen</h2>
 
@@ -55,6 +64,12 @@ export default {
       this.mitbringseldinge = this.mitbringseldinge.filter(mitbringsel => mitbringsel !== ding2remove)
       new_event.mitbring_dinge = this.mitbringseldinge;
     }
+  },
+  mounted() {
+    var stepProgress = document.getElementById('progressStep4');
+    stepProgress.classList.add('current-item');
+    var stepProgressRemove = document.getElementById('progressStep1', 'progressStep2', 'progressStep3');
+    stepProgressRemove.classList.remove('current-item');
   }
   
 }

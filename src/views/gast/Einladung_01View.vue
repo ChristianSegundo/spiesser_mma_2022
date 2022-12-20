@@ -50,7 +50,6 @@ export default {
   components: {
     FirstComponent,
     MapsComponent: MapsComponent
-
   }
 }
 </script>

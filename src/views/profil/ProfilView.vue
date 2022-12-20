@@ -1,10 +1,13 @@
 <template>
   <h1>Hallo "name"👋🏼 ! </h1>
-  <input id="profilvorname" type="text" value="Brenda">
+  <div class="profile-wrapper">
+    <input id="profilvorname" type="text" value="Brenda">
   <input id="profilnachname" type="text" value="Sieber">
   <input id="profilmail" type="text" value="brenda.sieber@stud.fhgr.ch">
+  <router-link to='/profil/profil-angaben-aendern' class="button-10 space-top">Profil bearbeiten</router-link>
 
-  <router-link to='/profil/profil-angaben-aendern' class="button-10">Profil bearbeiten</router-link>
+  </div>
+
 
   <p>Deine Organisator-Statistik:</p>
 

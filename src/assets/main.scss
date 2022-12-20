@@ -1,6 +1,3 @@
-// GLobale SCSS können in den Views jeweils unter Style mit dem Attribut "lang = "scss" überschrieben werden.
-//----------------------------------------------------------------------------------------------------------
-
 @import "https://use.typekit.net/ckm2djo.css";
 @import "http://fonts.cdnfonts.com/css/bahnschrift";
 
@@ -26,9 +23,9 @@ body {
     width: 100%;
     padding-bottom: 105px;
     min-height: 100vh;
+    padding-top: 30px;
 
 }
-
 :root {
     --orange: #C93F08;
     --darkgrey: #2F2D2E;
@@ -36,16 +33,19 @@ body {
     --lightblue: #e7f9f9;
     --green: #26867B;
 
-    --headline-size: 22px;
+    --headline-size: 26px;
     --subline-size: 18px;
     --title-size: 16px;
     --paragraph-size: 14px;
     --infotext-size: 10px;
+
+    --headline-font: bahnschrift, sans-serif;
+    --text-font: allotrope, sans-serif;
 }
 
 h1 {
     font-size: var(--headline-size);
-    font-family: allotrope, sans-serif;
+    font-family: var(--text-font);
     font-weight: 700;
     text-transform: uppercase;
     color: var(--orange);
@@ -53,26 +53,26 @@ h1 {
 
 h2 {
     font-size: var(--subline-size);
-    font-family: allotrope, sans-serif;
+    font-family: var(--text-font);
     font-weight: 500;
 }
 
 h3 {
     font-size: var(--title-size);
-    font-family: allotrope, sans-serif;
+    font-family: var(--text-font);
     font-weight: 500;
 }
 
 p,
 label {
     font-size: var(--paragraph-size);
-    font-family: bahnschrift;
+    font-family: var(--headline-font);
     font-weight: 300;
 }
 
 a {
     font-size: var(--paragraph-size);
-    font-family: bahnschrift;
+    font-family: var(--headline-font);
     font-weight: 500;
     color: var(--orange);
 }
@@ -84,10 +84,10 @@ a:hover {
 
 figure {
     font-size: var(--infotext-size);
-    font-family: bahnschrift;
+    font-family: var(--headline-font);
     font-weight: 300;
     font-stretch: condensed;
-    color: #1f1f1f;
+    color: var(--darkgrey);
     padding: 0 25px;
     text-align: center;
 }
@@ -99,15 +99,15 @@ figure {
 button {
     border-width: 0;
     font-size: var(--paragraph-size);
-    font-family: bahnschrift;
+    font-family: var(--headline-font);
     font-weight: 500;
 
 }
 
 .button-10 {
     height: 44px;
-    background: #2F2D2E;
-    font-size: 16px;
+    background: var(--darkgrey);
+    font-size: var(--title-size);
     padding: 0 40px;
     border-radius: 20px;
     text-decoration: none;
@@ -123,7 +123,7 @@ button {
 .button-10:hover {
 
     background: transparent;
-    box-shadow: inset 0px 0px 0px 2px #2F2D2E;
+    box-shadow: inset 0px 0px 0px 2px var(--darkgrey);
     text-decoration: none;
 }
 
@@ -139,18 +139,17 @@ button {
     width: 60%;
     margin: auto;
     display: block;
-    padding-top: 40px;
 }
 
 input,
 textarea {
-    margin: 10px 30px;
-    width: 85%;
+    margin: 10px 0;
+    width: 340px;
     border: 1px solid #d2d2d2;
     padding: 10px;
     border-radius: 5px;
     background: #d5d5d5;
-    font-family: allotrope;
+    font-family: var(--text-font);
     font-weight: 700;
 }
 
@@ -179,26 +178,6 @@ textarea {
     margin-bottom: 30px;
 }
 
-.middle {
-    margin: 50% 0;
-}
-
-#time-choose {
-    display: flex;
-    padding: 10px 130px;
-}
-
-#time-choose input {
-    background-color: var(--darkgrey);
-    margin: 0 !important;
-    margin: 10px 30px;
-    width: 100%;
-    color: white;
-}
-
-#time-choose p {
-    width: auto;
-}
 
 //   Toggle Buttons
 
@@ -236,8 +215,8 @@ textarea {
 
 .content p {
     margin: 8px 0;
-    font-size: 0.75em;
-    color: #333;
+    font-size: var(--paragraph-size);
+    color: var(--darkgrey);
 }
 
 #zusage-toggle {
@@ -258,27 +237,30 @@ textarea {
 
 .mitbringliste li {
     font-weight: 700;
-    font-family: allotrope, sans-serif;
-    font-size: 14px;
+    font-family: var(--text-font);
+    font-size: var(--paragraph-size);
     text-align: left;
     list-style: none;
     // padding: 16px 0;
-    border-bottom: #2F2D2E 1px solid;
+    border-bottom: var(--darkgrey) 1px solid;
     display: flex;
     justify-content: space-between;
     color: var(--orange);
     align-items: center;
 
 }
+
 .mitbringliste #dingsel-titel {
     width: 80%;
     padding: 10px;
 }
+
 .mitbringliste #delete-dingsel {
     width: 20%;
     text-align: center;
 }
-#delete-dingsel svg{
+
+#delete-dingsel svg {
     width: 22px;
 }
 
@@ -289,17 +271,6 @@ li {
     padding: 0;
 }
 
-// .mitbringliste-input {
-//     background-color: #f1f1f1;
-//     border: solid #2F2D2E;
-//     border-width: 0 0 1px 0;
-//     border-radius: 0px;
-//     width: 300px;
-//     margin-top: 50px;
-//     font-weight: 700;
-//     font-family: allotrope, sans-serif;
-//     font-size: 16px;
-// }
 
 .mitbringliste-input {
     display: flex;
@@ -319,22 +290,22 @@ li {
 
 .mitbringliste-input button {
     width: 20%;
-    border: solid #2F2D2E;
+    border: solid var(--darkgrey);
     border-width: 0 0 1px 0;
     background-color: transparent;
-margin: 0;
+    margin: 0;
 }
 
 .mitbringliste-input svg {
     width: 22px;
     background-color: #f1f1f1;
     border: none;
-    fill: #C93F08;
+    fill: var(--orange);
     transition: all ease-in-out 0.2s;
 }
 
 .mitbringliste-input svg:hover {
-    fill: #2F2D2E;
+    fill: var(--darkgrey);
     width: 22px;
 }
 
@@ -347,13 +318,13 @@ margin: 0;
 }
 
 .preview-date #date {
-    background: #2F2D2E;
+    background: var(--darkgrey);
     color: white;
     width: 60%;
     padding: 15px;
     margin: auto;
-    font-size: 16px;
-    font-family: allotrope, sans-serif;
+    font-size: var(--title-size);
+    font-family: var(--text-font);
     font-weight: 700;
 }
 
@@ -361,8 +332,8 @@ margin: 0;
     width: 60%;
     padding: 15px 15px 0px;
     margin: auto;
-    font-size: 16px;
-    font-family: allotrope, sans-serif;
+    font-size: var(--title-size);
+    font-family: var(--text-font);
     font-weight: 700;
 }
 
@@ -378,6 +349,7 @@ margin: 0;
     background: #d5d5d5;
     padding: 15px;
     margin: 0;
+    border-radius: 5px;
 }
 
 .event-invite-buttons svg {
@@ -393,7 +365,7 @@ margin: 0;
 
 .event-invite-buttons {
     display: flex;
-    width: 300px;
+    width: 340px;
 }
 
 .button-5 {
@@ -563,49 +535,153 @@ margin: 0;
     transform: translate(-50%, -50%);
 }
 
-.dashboard-event-inner-name .dashboard-eventname  {
+.dashboard-event-inner-name .dashboard-eventname {
     font-weight: bold;
     font-size: var(--subline-size);
     margin-bottom: 0px;
 }
-.dashboard-event-inner-name .dashboard-eventstartzeit  {
+
+.dashboard-event-inner-name .dashboard-eventstartzeit {
     margin-top: 5px;
 }
-#tablist li{
+
+#tablist li {
     list-style: none;
     width: 50%;
     float: left;
     text-align: center;
     padding: 5px 16px;
-    font-family: bahnschrift;
+    font-family: var(--headline-font);
     font-size: var(--subline-size);
     color: #919191;
 }
-#tablist li:hover{
-    border: solid black;
+
+#tablist li:hover {
+    border: solid var(--darkgrey);
     border-width: 0 0 2px 0;
-    color: black;
+    color: var(--darkgrey);
 }
-.activ#tablist li{
-    border: solid black;
+
+.activ#tablist li {
+    border: solid var(--darkgrey);
     border-width: 0 0 2px 0;
-    color: black;
+    color: var(--darkgrey);
 }
+
 #tablist {
     width: 100%;
     margin: 0;
     padding: 0;
 }
-#tabpanel{
+
+#tabpanel {
     width: 220px;
 }
-.vc-container {
-width: 350px;
-}
-.input-time:before {
-    content: '13:00 Uhr';
-    text-align: center;
 
-}.input-time:focus:before {
-    content: '';
+.vc-container {
+    width: 350px;
+}
+
+input[type=time] {
+    border: none;
+    color: white;
+    font-size: var(--paragraph-size);
+    font-family: helvetica;
+    width: 100px;
+    background: var(--darkgrey);
+}
+
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+  the up and down buttons and the 'X' button */
+input[type=time]::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+  second, second and am/pm */
+input[type=time]::-webkit-datetime-edit-text {
+    padding: 19px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+  `-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+input[type=time]::-webkit-datetime-edit-hour-field {
+    background-color: var(--darkgrey);
+    border-radius: 15%;
+    padding: 19px 13px;
+}
+
+/* Minute */
+input[type=time]::-webkit-datetime-edit-minute-field {
+    background-color: var(--darkgrey);
+    border-radius: 15%;
+    padding: 19px 13px;
+}
+
+/* AM/PM */
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    background-color: #7155d3;
+    border-radius: 15%;
+    color: #fff;
+    padding: 19px 13px;
+}
+
+/* 'X' button for resetting/clearing time */
+input[type=time]::-webkit-clear-button {
+    display: none;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+input[type=time]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.profil-bearbeiten-inputs {
+    width: 380px;
+}
+
+.header-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-items svg {
+    width: 20px;
+}
+
+.header-items-2 {
+    position: absolute;
+    left: 40px;
+    top: 15px;
+}
+
+.header-items-2 svg {
+    width: 20px;
+}
+
+.teilnahmen-wrapper {
+    text-align: left;
+    width: 340px;
+}
+
+.teilnahmen-wrapper li {
+    list-style: none;
+    font-family: var(--headline-font);
+    font-weight: 300;
+}
+
+.teilnahmen-wrapper ul {
+    padding: 0;
+}
+
+.profile-wrapper {
+    width: 340px;
+}
+.margin-auto {
+    margin: auto;
 }
