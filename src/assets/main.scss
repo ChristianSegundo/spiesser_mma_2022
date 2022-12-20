@@ -183,6 +183,22 @@ textarea {
     margin: 50% 0;
 }
 
+#time-choose {
+    display: flex;
+    padding: 10px 130px;
+}
+
+#time-choose input {
+    background-color: var(--darkgrey);
+    margin: 0 !important;
+    margin: 10px 30px;
+    width: 100%;
+    color: white;
+}
+
+#time-choose p {
+    width: auto;
+}
 
 //   Toggle Buttons
 
@@ -362,7 +378,6 @@ margin: 0;
     background: #d5d5d5;
     padding: 15px;
     margin: 0;
-    border-radius: 5px;
 }
 
 .event-invite-buttons svg {
@@ -587,94 +602,10 @@ margin: 0;
 .vc-container {
 width: 350px;
 }
+.input-time:before {
+    content: '13:00 Uhr';
+    text-align: center;
 
-input[type=time] {
-    border: none;
-    color: white;
-    font-size: 14px;
-    font-family: helvetica;
-    width: 100px;
-    background: var(--darkgrey);
-  }
-  
-  
-  /* Wrapper around the hour, minute, second, and am/pm fields as well as 
-  the up and down buttons and the 'X' button */
-  input[type=time]::-webkit-datetime-edit-fields-wrapper {
-    display: flex;
-  }
-  
-  /* The space between the fields - between hour and minute, the minute and 
-  second, second and am/pm */
-  input[type=time]::-webkit-datetime-edit-text {
-    padding: 19px 4px;
-  }
-  
-  /* The naming convention for the hour, minute, second, and am/pm field is
-  `-webkit-datetime-edit-{field}-field` */
-  
-  /* Hour */
-  input[type=time]::-webkit-datetime-edit-hour-field {
-    background-color: var(--darkgrey);
-    border-radius: 15%;
-    padding: 19px 13px;
-  }
-  
-  /* Minute */
-  input[type=time]::-webkit-datetime-edit-minute-field {
-    background-color: var(--darkgrey);
-    border-radius: 15%;
-    padding: 19px 13px;
-  }
-  
-  /* AM/PM */
-  input[type=time]::-webkit-datetime-edit-ampm-field {
-    background-color: #7155d3;
-    border-radius: 15%;
-    color: #fff;
-    padding: 19px 13px;
-  }
-  
-  /* 'X' button for resetting/clearing time */
-  input[type=time]::-webkit-clear-button {
-    display: none;
-  }
-  
-  /* Up/Down arrows for incrementing/decrementing the value */
-  input[type=time]::-webkit-inner-spin-button {
-    display: none;
-  }
-  .profil-bearbeiten-inputs {
-    width: 380px;
-  }
-  .header-items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .header-items svg {
-    width: 20px;
-  }
-  .header-items-2 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-  }
-  .header-items-2 svg {
-    width: 20px;
-  }
-  .teilnahmen-wrapper {
-    text-align: left;
-    width: 340px;
-  }
-  .teilnahmen-wrapper li {
-    list-style: none;
-    font-family: bahnschrift;
-    font-weight: 300;
-  }
-  .teilnahmen-wrapper ul {
-    padding: 0;
-  }
+}.input-time:focus:before {
+    content: '';
+}
