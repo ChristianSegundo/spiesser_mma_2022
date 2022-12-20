@@ -1,5 +1,4 @@
 <template>
-  <PreloaderComponent></PreloaderComponent>
   <div id="logo-header">
     <img src="../assets/img/Logo_Negativ_1.png" alt="Spiesser Logo">
   </div>
