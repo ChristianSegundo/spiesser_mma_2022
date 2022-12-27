@@ -15,7 +15,7 @@
     placeholder="spiesser.ch/event-xyz33">
 
   <div class="event-invite-buttons">
-    <button class="button-10 space-top button-5" v-on:click="copy(); toggle = !toggle"><svg
+    <button class="button-10 space-top button-5 invert-button" v-on:click="copy(); toggle = !toggle"><svg
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
         <path

@@ -1,6 +1,6 @@
 <template>
+  <div class="middle">
   <h1>Wer bist du?</h1>
-  <div>
   <input type="text" id="gastname" name="gastname" placeholder="Name*"><br>
   <input type="email" id="gastemail" name="gastemail" placeholder="Email"><br>
   <figure>Wenn du keine Mail hinterlegst, können wir dir keine Updates und Informationen zum Event senden.</figure>

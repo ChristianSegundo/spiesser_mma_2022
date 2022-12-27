@@ -1,7 +1,8 @@
 <template>
-  <h1>Anzahl Personen</h1>
 
-  <div>
+  <div class="margin-auto">
+    <h1>Anzahl Personen</h1>
+
   <div class="teilnehmer-zusage-alleine">
     <input type="radio" id="teilnehmer-allein" name="teilnehmer" value="teilnehmer-allein" checked>
     <label for="teilnehmer-allein">Ich komme allein</label><br>
