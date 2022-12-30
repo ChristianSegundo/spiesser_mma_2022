@@ -18,7 +18,7 @@
   <h2>Vorschau</h2>
 
   <div class="preview-date">
-    <p v-if="new_event.eventdatum !== undefined" id="date">{{ new_event.eventdatum }}</p>
+    <p v-if="new_event.eventdatum !== undefined" id="date">{{ getDate }}</p>
     <p v-else id="date">Kein Datum definiert</p>
 
     <p v-if="new_event.startzeit !== undefined" id="time">{{ new_event.startzeit }}</p>
@@ -38,7 +38,7 @@
 import { new_event } from '../../events/new_event.js';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 import MapsComponent from '@/components/MapsComponent.vue';
-
+import {SpiesserTime} from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Event_Erstellen_VorschauView',
@@ -48,6 +48,12 @@ export default {
   },
   data() {
     return { new_event }
+  },
+  computed: {
+    getDate(){
+        var date = new SpiesserTime(new_event.eventdatum)
+        return date.fulldate;
+      }
   },
   mounted() {
     var stepProgress = document.getElementById('progressStep5');

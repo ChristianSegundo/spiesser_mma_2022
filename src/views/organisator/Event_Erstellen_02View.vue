@@ -15,12 +15,16 @@
   <h1 v-else>Wann findet's statt?</h1>
 
 
-  <div id="time-choose">
+  <h2 v-if="new_event.eventdatum != undefied">{{getDate}}</h2>
+
+
+
+  <!-- <div id="time-choose">
     <input type="time" min="00:00" max="24:00" placeholder: class="input-time" v-model="new_event.startzeit">
-  </div>
+  </div> -->
 
   <div id="kalenderanzeige">
-    <vc-date-picker color="orange" id="date-input-1" v-model="new_event.eventdatum" />
+    <vc-date-picker mode = 'dateTime' color="orange" id="date-input-1" v-model="new_event.eventdatum" is24hr :model-config="modelConfig" timezone="UTC"/>
     <!-- <input type="date" id="date-input-1" v-model="new_event.eventdatum"> -->
   </div>
 
@@ -115,6 +119,7 @@ content: "hihi";
 import { new_event } from '../../events/new_event.js'
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 import 'v-calendar/dist/style.css'
+import {SpiesserTime} from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Event_Erstellen_02View',
@@ -123,6 +128,10 @@ export default {
       new_event,
       isActive: false,
       toggle: false,
+      modelConfig:{
+        type: "string"
+      },
+      // active_date : setDate()
     };
   },
   methods: {
@@ -134,6 +143,12 @@ export default {
         // if switched back, also switch new_event-Object back to false
       }
     },
+  }, // END METHODS
+  computed: {
+    getDate(){
+        var date = new SpiesserTime(new_event.eventdatum)
+        return date.fulldate;
+      }
   },
   components: {
     ProgressBarComponent: ProgressBarComponent
