@@ -15,7 +15,8 @@
           <li v-for="event in get_sorted_events" class="dashboard-event-outer" @click="linkto(event.id)">
             <div class="dashboard-event-inner">
               <div class="dashboard-event-inner-date">
-                <p>{{ event.eventdatum }}</p>
+                <p>{{ getSpiesserDay(event.eventdatum, event.startzeit) }}</p>
+                <p>{{ getSpiesserDate(event.eventdatum, event.startzeit) }}</p>
               </div>
               <div class="dashboard-event-inner-name">
                 <p class="dashboard-eventname">{{ event.eventname }}</p>
@@ -88,6 +89,7 @@
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
 import 'v-calendar/dist/style.css'
+import {SpiesserTime} from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Dashboard_EventsView',
@@ -97,7 +99,17 @@ export default {
   methods: {
     linkto(ID) {
       this.$router.push("/dashboard/event-details/" + ID)
-    }
+    },
+    getSpiesserDay(eventdatum, eventtime){
+      var stamp = eventdatum + "T" + eventtime;
+      var date = new SpiesserTime(stamp)
+      return date.dayname_short
+    },
+    getSpiesserDate(eventdatum, eventtime){
+      var stamp = eventdatum + "T" + eventtime;
+      var date = new SpiesserTime(stamp);
+      return date.dateshort;
+    },
   },
   computed: {
     alle_events() {

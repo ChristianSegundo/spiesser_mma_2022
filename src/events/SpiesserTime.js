@@ -146,6 +146,7 @@ export class SpiesserTime{
 
             this.daynumber = stamp.slice(8,10) + "."
             this.fulldate = this.dayname_short + ", " + this.daynumber + " " + this.monthname + " " + this.year
+            this.dateshort = this.daynumber + this.monthnumber
         }; // END CONSTRUCTOR
 
          }; //END CLASS

@@ -12,7 +12,7 @@
   <p>Vorschau</p>
 
   <div class="preview-date">
-    <p id="date">{{event.eventdatum}}</p>
+    <p id="date">{{getSpiesserDate(event.eventdatum, event.startzeit)}}</p>
     <p id="time">{{event.startzeit}} Uhr</p>
   </div>
 
@@ -28,6 +28,7 @@
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
 import MapsComponent from '@/components/MapsComponent.vue';
+import {SpiesserTime} from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Event_UebersichtView',
@@ -39,6 +40,13 @@ export default {
     return{
       ID: this.$route.params.id
     }
+  },
+  methods:{
+    getSpiesserDate(eventdatum, eventtime){
+      var stamp = eventdatum + "T" + eventtime;
+      var date = new SpiesserTime(stamp);
+      return date.fulldate;
+    },
   },
   computed:{
     event(){

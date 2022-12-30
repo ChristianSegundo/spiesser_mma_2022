@@ -62,8 +62,8 @@ export default createStore({
                         return sorted_events;
 
                         function compare_timestamps(event1, event2){
-                                var date_string1 = event1.eventdatum + "T" + event1.startzeit + ":00+01:00";
-                                var date_string2 = event2.eventdatum + "T" + event2.startzeit + ":00+01:00";
+                                var date_string1 = event1.eventdatum + "T" + event1.startzeit;
+                                var date_string2 = event2.eventdatum + "T" + event2.startzeit;
                                 var date_timestamp1 = Date.parse(date_string1);
                                 var date_timestamp2 = Date.parse(date_string2);
                                 return date_timestamp1 - date_timestamp2;
