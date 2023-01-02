@@ -22,25 +22,35 @@
   export default {
     name: 'MapsComponent',
     props: {
-      vorschau: Boolean
+      vorschau: Boolean,
+      latitude: Number,
+      longitude: Number
     },
+
     mounted(){
         
-      if (this.vorschau == true && new_event.ort.name != undefined){
-        
+
+      if (this.vorschau == true){
+      
+      var latitude = this.latitude;
+      var longitude = this.longitude;
+
       let eventMap = document.createElement('script')
        eventMap.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initVorschauMap&libraries=places&v=weekly')
        document.head.appendChild(eventMap)
 
+
        function initVorschauMap() {
+
+
        const map = new google.maps.Map(document.getElementById("map"), {
-       center: { lat: new_event.ort.latitude, lng: new_event.ort.longitude },
+       center: { lat: latitude, lng: longitude },
        zoom: 12,
        mapTypeId: "roadmap",
        });
 
       const marker = new google.maps.Marker({
-      position: { lat: new_event.ort.latitude, lng: new_event.ort.longitude },
+      position: { lat: latitude, lng: longitude },
       map: map,
      });
  

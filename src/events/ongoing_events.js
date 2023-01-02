@@ -8,7 +8,11 @@ const event1 ={
         startzeit: "18:00",
         eventdatum: "2023-08-02",
         zusagedatum: "2023-01-31",
-        ort: "zürisee",
+        ort: {
+                name: "Zürichsee",
+                latitude: 47.2225216,
+                longitude: 8.752711399999999
+            },
         mitbring_dinge: [{"Rüeblisalat": false}, {"2 Gascho Bier": false}],
         linkcode: "XYZ",
 }
@@ -21,7 +25,11 @@ const event2 ={
         startzeit: "16:00",
         eventdatum: "2023-06-17",
         zusagedatum: "2023-04-31",
-        ort: "Bremgartenwald",
+        ort: {
+                name: "Bremgartenwald",
+                latitude: 46.96829479999999,
+                longitude: 7.432560299999998
+            },
         mitbring_dinge: [{"BBQ-Sauce": false}, {"Grillzange": false}],
         linkcode: "ABC",
 }
@@ -34,7 +42,11 @@ const event3 ={
         startzeit: "20:00",
         eventdatum: "2023-05-12",
         zusagedatum: "2023-03-31",
-        ort: "Zuhause im Garten",
+        ort: {
+                name: "Allmendweg 18, Aarau",
+                latitude: 47.3923254,
+                longitude: 8.0381469
+            },
         mitbring_dinge: [{"Grillkohle": false}, {"Geburtstagskuchen": false}],
         linkcode: "EFG",
 }

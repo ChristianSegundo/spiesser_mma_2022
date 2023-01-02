@@ -16,7 +16,7 @@
     <p id="time">{{event.startzeit}} Uhr</p>
   </div>
 
-  <MapsComponent vorschau></MapsComponent>
+  <MapsComponent vorschau :latitude="event.ort.latitude" :longitude="event.ort.longitude" ></MapsComponent>
 
   <p class="preview-text">{{event.eventbeschreibung}}</p>
 
