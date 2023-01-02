@@ -34,13 +34,13 @@
 
        function initVorschauMap() {
        const map = new google.maps.Map(document.getElementById("map"), {
-       center: { lat: 47.3853961, lng: 8.5305746 },
+       center: { lat: new_event.ort.latitude, lng: new_event.ort.longitude },
        zoom: 12,
        mapTypeId: "roadmap",
        });
 
       const marker = new google.maps.Marker({
-      position: { lat: 47.3853961, lng: 8.5305746 },
+      position: { lat: new_event.ort.latitude, lng: new_event.ort.longitude },
       map: map,
      });
  
