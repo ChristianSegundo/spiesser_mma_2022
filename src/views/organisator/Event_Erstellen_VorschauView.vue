@@ -11,7 +11,7 @@
   </div>
 
   <!-- Debugging: -->
-  <p>{{ new_event }}</p>
+  <!-- <p>{{ new_event }}</p> -->
 
 
   <h1 v-if="new_event.eventname !== undefined">{{ new_event.eventname }}</h1>
@@ -26,7 +26,7 @@
     <p v-else id="time">Keine Zeit definiert</p>
   </div>
 
-  <MapsComponent></MapsComponent>
+  <MapsComponent vorschau/>
 
   <p v-if="new_event.eventbeschreibung !== undefined" class="preview-text">{{ new_event.eventbeschreibung }}</p>
   <p v-else class="preview-text">Keine Beschreibung definiert</p>
@@ -45,7 +45,7 @@ export default {
   name: 'Event_Erstellen_VorschauView',
   components: {
     ProgressBarComponent: ProgressBarComponent,
-    MapsComponent: MapsComponent
+    MapsComponent: MapsComponent,
   },
   data() {
     return { new_event }

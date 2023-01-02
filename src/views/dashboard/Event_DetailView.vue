@@ -16,7 +16,7 @@
     <p id="time">{{event.startzeit}} Uhr</p>
   </div>
 
-  <MapsComponent></MapsComponent>
+  <MapsComponent vorschau></MapsComponent>
 
   <p class="preview-text">{{event.eventbeschreibung}}</p>
 

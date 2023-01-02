@@ -11,7 +11,7 @@
   </div>
   <h1>Location</h1>
   <!-- <input type="text" placeholder="Wo findet das Brötle-Event statt?" v-model="new_event.ort"> -->
-  <MapsComponent vorschau></MapsComponent>
+  <MapsComponent></MapsComponent>
     <router-link to='/organisator/event-erstellen-04' class="button-10 space-top">Weiter</router-link>
 
 </template>

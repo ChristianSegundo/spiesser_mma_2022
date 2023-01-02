@@ -2,12 +2,14 @@
  <div class="mapwrapper">
    
 
-  <input v-if="vorschau"
+  <input v-if="!vorschau"
       id="pac-input"
       class="controls"
       type="text"
       placeholder="Wo findet dein Event statt?"
   />
+
+  <h2 v-else>{{ new_event.ort.name }}</h2>
     <div id="map"></div>
  </div>
 
@@ -24,6 +26,31 @@
     },
     mounted(){
         
+      if (this.vorschau == true && new_event.ort.name != undefined){
+        
+      let eventMap = document.createElement('script')
+       eventMap.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initVorschauMap&libraries=places&v=weekly')
+       document.head.appendChild(eventMap)
+
+       function initVorschauMap() {
+       const map = new google.maps.Map(document.getElementById("map"), {
+       center: { lat: 47.3853961, lng: 8.5305746 },
+       zoom: 12,
+       mapTypeId: "roadmap",
+       });
+
+      const marker = new google.maps.Marker({
+      position: { lat: 47.3853961, lng: 8.5305746 },
+      map: map,
+     });
+ 
+      };
+
+      window.initVorschauMap = initVorschauMap;
+      } 
+
+      else{
+
         let eventMap = document.createElement('script')
         eventMap.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly')
         document.head.appendChild(eventMap)
@@ -46,7 +73,6 @@
 
 
         // Setze Marke nur dann Neu wenn es keine VorschauMap ist:
-        if (!vorschau) {
           
           let markers = [];
           // Clear out the old markers.
@@ -54,7 +80,6 @@
             marker.setMap(null);
           });
           markers = [];
-        }
 
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
@@ -111,6 +136,8 @@
       }); // END MAPS EVENTLISTENER-FUNCTION
     }
     window.initAutocomplete = initAutocomplete;
+  } // END IF ELSE
+
 
     }, // END MOUNTED
     
