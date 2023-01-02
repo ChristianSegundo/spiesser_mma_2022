@@ -54,6 +54,10 @@ export default {
     getDate(){
         var date = new SpiesserTime(new_event.eventdatum)
         return date.fulldate;
+      },
+    getTime(){
+        var date = new SpiesserTime(new_event.eventdatum)
+        return date.time;
       }
   },
   mounted() {

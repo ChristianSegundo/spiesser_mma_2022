@@ -24,7 +24,7 @@
   </div> -->
 
   <div id="kalenderanzeige">
-    <vc-date-picker mode = 'dateTime' color="orange" id="date-input-1" v-model="new_event.eventdatum" is24hr :model-config="modelConfig" timezone="UTC"/>
+    <vc-date-picker mode = 'dateTime' color="orange" id="date-input-1" v-model="new_event.eventdatum" is24hr :model-config="modelConfig" timezone="UTC" @change = "formatdata()"/>
     <!-- <input type="date" id="date-input-1" v-model="new_event.eventdatum"> -->
   </div>
 
@@ -143,6 +143,12 @@ export default {
         // if switched back, also switch new_event-Object back to false
       }
     },
+
+    formatdata() {
+      var date= new SpiesserTime(new_event.eventdatum)
+        new_event.startzeit = date.time;
+    }
+
   }, // END METHODS
   computed: {
     getDate(){
