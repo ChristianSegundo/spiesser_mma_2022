@@ -6,7 +6,11 @@ export const new_event = reactive({
             startzeit: "13:30",
             eventdatum: undefined,
             zusagedatum: false,
-            ort: undefined,
+            ort: {
+                name: undefined,
+                latitude: undefined,
+                longitude: undefined
+            },
             mitbring_dinge: [],
             linkcode: undefined,
   })

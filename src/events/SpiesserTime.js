@@ -52,10 +52,6 @@ export class SpiesserTime{
 
         var js_day = this.js_date_timestamp.getDay()
 
-
-
-
-
         switch (this.monthnumber) {
             case '01.':
               this.monthname = "Januar"

@@ -10,6 +10,7 @@
     <ProgressBarComponent></ProgressBarComponent>
   </div>
 
+  <!-- Debugging: -->
   <p>{{ new_event }}</p>
 
 
