@@ -9,7 +9,7 @@
     </router-link>
   </div>
   <h1>{{event.eventname}}</h1>
-  <p>Vorschau</p>
+  <!-- <p>Vorschau</p> -->
 
   <div class="preview-date">
     <p id="date">{{getSpiesserDate(event.eventdatum, event.startzeit)}}</p>

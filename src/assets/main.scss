@@ -360,7 +360,7 @@ li {
 
 .event-invite-buttons svg:hover {
     width: 32%;
-    fill: var(--darkgrey);
+    fill: white;
 }
 
 .event-invite-buttons {
@@ -528,14 +528,14 @@ li {
     width: 30%;
     position: relative;
     border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .dashboard-event-inner-date p {
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .dashboard-event-inner-name .dashboard-eventname {
@@ -631,4 +631,10 @@ li {
 }
 .margin-auto {
     margin: auto;
+}
+.vc-time-picker {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    justify-content: center;
 }

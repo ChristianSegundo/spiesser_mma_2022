@@ -1,5 +1,5 @@
 <template>
-  <div class="middle">
+  <div class="margin-auto">
   <h1>Wer bist du?</h1>
   <input type="text" id="gastname" name="gastname" placeholder="Name*"><br>
   <input type="email" id="gastemail" name="gastemail" placeholder="Email"><br>
