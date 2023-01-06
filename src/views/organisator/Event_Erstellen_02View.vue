@@ -10,22 +10,13 @@
     <ProgressBarComponent></ProgressBarComponent>
   </div>
 
-  <!-- Wenn der Name nicht definiert worde, steht einfach "Wann findet's statt" -->
   <h1 v-if="new_event.eventname">Wann findet "{{ new_event.eventname }}" statt?</h1>
   <h1 v-else>Wann findet's statt?</h1>
-
-
-  <h2 v-if="new_event.eventdatum != undefied">{{getDate}}</h2>
-
-
-
-  <!-- <div id="time-choose">
-    <input type="time" min="00:00" max="24:00" placeholder: class="input-time" v-model="new_event.startzeit">
-  </div> -->
+  <h2 v-if="new_event.eventdatum != undefied">{{ getDate }}</h2>
 
   <div id="kalenderanzeige">
-    <vc-date-picker mode = 'dateTime' color="orange" id="date-input-1" v-model="new_event.eventdatum" is24hr :model-config="modelConfig" timezone="UTC" @change = "formatdata()"/>
-    <!-- <input type="date" id="date-input-1" v-model="new_event.eventdatum"> -->
+    <vc-date-picker mode='dateTime' color="orange" id="date-input-1" v-model="new_event.eventdatum" is24hr
+      :model-config="modelConfig" timezone="UTC" @change="formatdata()" />
   </div>
 
   <div id="zusage-toggle">
@@ -40,14 +31,13 @@
   </div>
 
   <vc-date-picker v-show='toggle' color="orange" id="date-input-2" v-model="new_event.zusagedatum" />
-  <!-- <input type="date" id="date-input-2" v-model="new_event.zusagedatum"> -->
 
   <router-link to='/organisator/event-erstellen-03' class="button-10 space-top">Weiter</router-link>
 
 
 </template>
 
-<style>
+<!-- <style>
 input[type=time] {
   border: none;
   color: #2a2c2d;
@@ -104,22 +94,22 @@ input[type=time]::-webkit-inner-spin-button {
 }
 
 input::-webkit-date-and-time-value {
-margin-top: 0px;
-text-align: center;
-width: 100%;
-padding: 10px;
-}
-input::-webkit-date-and-time-value::before {
-content: "hihi";
+  margin-top: 0px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
 }
 
-</style>
+input::-webkit-date-and-time-value::before {
+  content: "hihi";
+}
+</style> -->
 
 <script>
 import { new_event } from '../../events/new_event.js'
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 import 'v-calendar/dist/style.css'
-import {SpiesserTime} from '../../events/SpiesserTime.js'
+import { SpiesserTime } from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Event_Erstellen_02View',
@@ -128,7 +118,7 @@ export default {
       new_event,
       isActive: false,
       toggle: false,
-      modelConfig:{
+      modelConfig: {
         type: "string"
       },
       // active_date : setDate()
@@ -138,23 +128,23 @@ export default {
     toggle_it() {
       // Zusage-Calendar display or not
       this.isActive = !this.isActive; this.toggle = !this.toggle
-      if (this.toggle == false){
+      if (this.toggle == false) {
         new_event.zusagedatum = false;
         // if switched back, also switch new_event-Object back to false
       }
     },
 
     formatdata() {
-      var date= new SpiesserTime(new_event.eventdatum)
-        new_event.startzeit = date.time;
+      var date = new SpiesserTime(new_event.eventdatum)
+      new_event.startzeit = date.time;
     }
 
   }, // END METHODS
   computed: {
-    getDate(){
-        var date = new SpiesserTime(new_event.eventdatum)
-        return date.fulldate;
-      }
+    getDate() {
+      var date = new SpiesserTime(new_event.eventdatum)
+      return date.fulldate;
+    }
   },
   components: {
     ProgressBarComponent: ProgressBarComponent

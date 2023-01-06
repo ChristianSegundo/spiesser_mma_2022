@@ -36,7 +36,7 @@
       var longitude = this.longitude;
 
       let eventMap = document.createElement('script')
-       eventMap.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initVorschauMap&libraries=places&v=weekly')
+       eventMap.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBAcW_RJ7uqZStGzZocVsZioIUyow_Q6ss&callback=initVorschauMap&libraries=places&v=weekly')
        document.head.appendChild(eventMap)
 
 

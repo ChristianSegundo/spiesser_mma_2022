@@ -358,9 +358,9 @@ li {
     margin: auto;
 }
 
-.event-invite-buttons svg:hover {
+.event-invite-buttons:hover svg {
     width: 32%;
-    fill: white;
+    fill: var(--darkgrey);
 }
 
 .event-invite-buttons {
@@ -390,6 +390,10 @@ li {
 }
 .invert-button svg {
     fill: var(--darkgrey);
+}
+
+.invert-button:hover svg {
+    fill: white;
 }
 
 .invite-deadline {
