@@ -1,10 +1,8 @@
 <template>
   <div class="header-items">
     <router-link to='/organisator/event-erstellen-04' class="goback-arrow">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-        <path
-          d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
       </svg>
     </router-link>
     <ProgressBarComponent></ProgressBarComponent>
@@ -21,13 +19,12 @@
   <div class="preview-date">
     <p v-if="new_event.eventdatum !== undefined" id="date">{{ getDate }}</p>
     <p v-else id="date">Kein Datum definiert</p>
-
     <p v-if="new_event.startzeit !== undefined" id="time">{{ new_event.startzeit }}</p>
     <p v-else id="time">Keine Zeit definiert</p>
   </div>
 
-  
-  <MapsComponent vorschau  :latitude="new_event.ort.latitude" :longitude="new_event.ort.longitude"/>
+
+  <MapsComponent vorschau :latitude="new_event.ort.latitude" :longitude="new_event.ort.longitude" />
 
 
 
@@ -42,7 +39,7 @@
 import { new_event } from '../../events/new_event.js';
 import ProgressBarComponent from '@/components/ProgressBarComponent.vue';
 import MapsComponent from '@/components/MapsComponent.vue';
-import {SpiesserTime} from '../../events/SpiesserTime.js'
+import { SpiesserTime } from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Event_Erstellen_VorschauView',
@@ -54,14 +51,14 @@ export default {
     return { new_event }
   },
   computed: {
-    getDate(){
-        var date = new SpiesserTime(new_event.eventdatum)
-        return date.fulldate;
-      },
-    getTime(){
-        var date = new SpiesserTime(new_event.eventdatum)
-        return date.time;
-      }
+    getDate() {
+      var date = new SpiesserTime(new_event.eventdatum)
+      return date.fulldate;
+    },
+    getTime() {
+      var date = new SpiesserTime(new_event.eventdatum)
+      return date.time;
+    }
   },
   mounted() {
     var stepProgress = document.getElementById('progressStep5');

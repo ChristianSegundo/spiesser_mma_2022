@@ -5,10 +5,10 @@
   <input type="email" placeholder="E-Mail*" required>
   <input type="password" placeholder="Passwort*" required>
   <input type="password" placeholder="Passwort wiederholen*" required>
-  <input type="checkbox" name = "AGB">
+  <input type="checkbox" name="AGB">
   <label for="AGB">Ich habe die AGB gelesen und akzeptiert</label>
   <a href="/login/email-bestaetigen">
-      <button>Registrieren</button>
+    <button>Registrieren</button>
   </a>
 
 

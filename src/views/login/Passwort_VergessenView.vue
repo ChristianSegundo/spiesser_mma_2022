@@ -34,7 +34,8 @@
       <input type="password" placeholder="Passwort wiederholen*" required>
       <div class="agb-wrapper">
         <input type="checkbox" name="AGB">
-      <label for="AGB">Ich habe die AGB gelesen und akzeptiert</label></div>
+        <label for="AGB">Ich habe die AGB gelesen und akzeptiert</label>
+      </div>
       <router-link to='/login/email-bestaetigen' class="button-10 space-top">Registrieren</router-link>
 
 
@@ -80,18 +81,19 @@
 .tabs__radio:checked+.tabs__label+.tabs__content {
   display: initial;
 }
-.agb-wrapper{
+
+.agb-wrapper {
   display: flex;
   width: 340px;
   justify-content: center;
 }
-.agb-wrapper input{
+
+.agb-wrapper input {
 
   width: 32px;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 </style>
 <script>
 

@@ -1,48 +1,40 @@
 <template>
-  
+
   <div class="margin-auto">
     <h1>Deine Brötle-Events</h1>
 
-  <div class="tabs">
-    <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-    <label for="tab1" class="tabs__label">Liste</label>
-    <div class="tabs__content">
-      <div id="liste-events" role="tabpanel" aria-labelledby="link1">
+    <div class="tabs">
+      <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+      <label for="tab1" class="tabs__label">Liste</label>
+      <div class="tabs__content">
+        <div id="liste-events" role="tabpanel" aria-labelledby="link1">
+          <ul class="dashboard-event-wrapper">
+            <li v-for="event in get_sorted_events" class="dashboard-event-outer" @click="linkto(event.id)">
+              <div class="dashboard-event-inner">
+                <div class="dashboard-event-inner-date">
+                  <p>{{ getSpiesserDay(event.eventdatum, event.startzeit) }}</p>
+                  <p>{{ getSpiesserDate(event.eventdatum, event.startzeit) }}</p>
+                </div>
+                <div class="dashboard-event-inner-name">
+                  <p class="dashboard-eventname">{{ event.eventname }}</p>
+                  <p class="dashboard-event">{{ event.startzeit }} Uhr</p>
+                </div>
 
-
-        <ul class="dashboard-event-wrapper">
-
-          <li v-for="event in get_sorted_events" class="dashboard-event-outer" @click="linkto(event.id)">
-            <div class="dashboard-event-inner">
-              <div class="dashboard-event-inner-date">
-                <p>{{ getSpiesserDay(event.eventdatum, event.startzeit) }}</p>
-                <p>{{ getSpiesserDate(event.eventdatum, event.startzeit) }}</p>
               </div>
-              <div class="dashboard-event-inner-name">
-                <p class="dashboard-eventname">{{ event.eventname }}</p>
-                <p class="dashboard-event">{{ event.startzeit }} Uhr</p>
-              </div>
-
-            </div>
-          </li>
-
-
-        </ul>
-
-
+            </li>
+          </ul>
+        </div>
+      </div>
+      <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+      <label for="tab2" class="tabs__label">Kalender</label>
+      <div class="tabs__content">
+        <div id="kalender-events" role="tabpanel" aria-labelledby="link2">
+          <!-- wenn Tab "Kalender" aktiviert, wird Inhalt angezeigt -->
+          <h3>Kalender</h3>
+          <vc-date-picker color="orange" id="date-input-1" />
+        </div>
       </div>
     </div>
-    <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-    <label for="tab2" class="tabs__label">Kalender</label>
-    <div class="tabs__content">
-      <div id="kalender-events" role="tabpanel" aria-labelledby="link2">
-        <!-- wenn Tab "Kalender" aktiviert, wird Inhalt angezeigt -->
-        <h3>Kalender</h3>
-        <vc-date-picker color="orange" id="date-input-1" />
-
-      </div>
-    </div>
-  </div>
   </div>
 
 
@@ -89,7 +81,7 @@
 // @ is an alias to /src
 import FirstComponent from '@/components/FirstComponent.vue'
 import 'v-calendar/dist/style.css'
-import {SpiesserTime} from '../../events/SpiesserTime.js'
+import { SpiesserTime } from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Dashboard_EventsView',
@@ -100,12 +92,12 @@ export default {
     linkto(ID) {
       this.$router.push("/dashboard/event-details/" + ID)
     },
-    getSpiesserDay(eventdatum, eventtime){
+    getSpiesserDay(eventdatum, eventtime) {
       var stamp = eventdatum + "T" + eventtime;
       var date = new SpiesserTime(stamp)
       return date.dayname_short
     },
-    getSpiesserDate(eventdatum, eventtime){
+    getSpiesserDate(eventdatum, eventtime) {
       var stamp = eventdatum + "T" + eventtime;
       var date = new SpiesserTime(stamp);
       return date.dateshort;

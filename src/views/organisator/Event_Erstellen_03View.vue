@@ -1,8 +1,7 @@
 <template>
-<div class="header-items">
+  <div class="header-items">
     <router-link to='/organisator/event-erstellen-02' class="goback-arrow">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
         <path
           d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
       </svg>
@@ -10,10 +9,8 @@
     <ProgressBarComponent></ProgressBarComponent>
   </div>
   <h1>Location</h1>
-  <!-- <input type="text" placeholder="Wo findet das Brötle-Event statt?" v-model="new_event.ort"> -->
   <MapsComponent></MapsComponent>
-    <router-link to='/organisator/event-erstellen-04' class="button-10 space-top">Weiter</router-link>
-
+  <router-link to='/organisator/event-erstellen-04' class="button-10 space-top">Weiter</router-link>
 </template>
 
 <script>
@@ -24,14 +21,14 @@ import MapsComponent from '@/components/MapsComponent.vue';
 
 
 export default {
-  name: 'Event_Erstellen_03View', 
+  name: 'Event_Erstellen_03View',
   components: {
     ProgressBarComponent: ProgressBarComponent,
     MapsComponent
 
   },
-  data(){
-    return{
+  data() {
+    return {
       new_event
     }
   },

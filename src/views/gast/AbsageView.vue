@@ -1,6 +1,8 @@
 <template>
-  <h1 style="font-size: 40px;">Schade!</h1>
-  <p>Auf ein anderes Mal</p>
+  <div class="margin-auto">
+    <h1 style="font-size: 90px; margin: 0;">Schade!</h1>
+    <p>Auf ein anderes Mal</p>
+  </div>
 </template>
 
 <script>
@@ -17,7 +19,7 @@ export default {
 
 <style scoped>
 #app {
-    justify-content: center !important;
+  justify-content: center !important;
 }
 </style>
 

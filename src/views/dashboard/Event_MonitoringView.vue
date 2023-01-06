@@ -1,19 +1,23 @@
 <template>
   <h1>Monitoring</h1>
   <div class="piechart"></div>
-<div class="legende-piechart">
-  <p>Zusage</p>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"/></svg>
-  <p>Absage</p>
-  <svg  style="fill:white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"/></svg>
-</div>
+  <div class="legende-piechart">
+    <p>Zusage</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z" />
+    </svg>
+    <p>Absage</p>
+    <svg style="fill:white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z" />
+    </svg>
+  </div>
   <div class="teilnahmen-wrapper">
     <h2><b>Teilnahmen</b></h2>
-  <ul>
-    <li>Regula</li>
-    <li>Sandro</li>
-    <li>Reto</li>
-  </ul>
+    <ul>
+      <li>Regula</li>
+      <li>Sandro</li>
+      <li>Reto</li>
+    </ul>
   </div>
   <span style="padding: 0px 0 20px; width: 80%;">
     <hr>
@@ -36,6 +40,7 @@
   width: 24px;
   margin: 0 10px;
 }
+
 .legende-piechart {
   padding: 20px 0;
   display: flex;
