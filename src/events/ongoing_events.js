@@ -86,14 +86,22 @@ export default createStore({
         mutations: {
                 add_event(state, new_event){
 
-                        var event ={};
+                        var event ={            
+                                ort: {
+                                name: undefined,
+                                latitude: undefined,
+                                longitude: undefined
+                            }
+                        };
                         event.id = Math.floor(Math.random() * 1000)
                         event.eventname = new_event.eventname;
                         event.eventbeschreibung = new_event.eventbeschreibung;
                         event.startzeit = new_event.startzeit;
                         event.eventdatum = new_event.eventdatum;
                         event.zusagedatum = new_event.zusagedatum;
-                        event.ort = new_event.ort;
+                        event.ort.name = new_event.ort.name;
+                        event.ort.latitude = new_event.ort.latitude;
+                        event.ort.longitude = new_event.ort.longitude;
                         event.mitbring_dinge = new_event.mitbring_dinge
                         event.linkcode = "https://450446-12.web.fhgr.ch/dashboard/event-details/" + event.id
                         
