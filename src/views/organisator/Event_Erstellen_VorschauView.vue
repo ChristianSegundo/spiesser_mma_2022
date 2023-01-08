@@ -69,8 +69,22 @@ export default {
   methods:{
     saveEvent(){
       this.$store.commit('add_event', new_event)
+      this.reset_new_event();
+    },
+    reset_new_event(){
+      new_event.eventname = undefined;
+      new_event.eventbeschreibung = undefined;
+      new_event.startzeit = undefined;
+      new_event.eventdatum = undefined;
+      new_event.zusagedatum = false;
+      new_event.ort.name = undefined;
+      new_event.ort.latitude = undefined;
+      new_event.ort.longitude = undefined;
+      new_event.mitbring_dinge = [];
+      new_event.linkcode = undefined;
+  }
     }
   }
-}
+
 </script>
 
