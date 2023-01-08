@@ -9,7 +9,7 @@
   </div>
 
   <!-- Debugging: -->
-  <p>{{ new_event }}</p>
+  <!-- <p>{{ new_event }}</p> -->
 
 
   <h1 v-if="new_event.eventname !== undefined">{{ new_event.eventname }}</h1>
@@ -30,7 +30,7 @@
 
   <p v-if="new_event.eventbeschreibung !== undefined" class="preview-text">{{ new_event.eventbeschreibung }}</p>
   <p v-else class="preview-text">Keine Beschreibung definiert</p>
-  <router-link to='/organisator/event-erstellen-einladung' class="button-10 space-top">Gäste einladen</router-link>
+  <router-link to='/organisator/event-erstellen-einladung' class="button-10 space-top" @click="saveEvent()">Speichern & Gäste einladen</router-link>
   <button class="button-10 space-top invert-button">Zum Kalender hinzufügen</button>
 
 </template>
@@ -65,6 +65,11 @@ export default {
     stepProgress.classList.add('current-item');
     var stepProgressRemove = document.getElementById('progressStep1', 'progressStep2', 'progressStep3', 'progressStep4');
     stepProgressRemove.classList.remove('current-item');
+  },
+  methods:{
+    saveEvent(){
+      this.$store.commit('add_event', new_event)
+    }
   }
 }
 </script>

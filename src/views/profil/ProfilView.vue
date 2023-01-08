@@ -1,5 +1,5 @@
 <template>
-  <h1>Hallo "name"👋🏼 ! </h1>
+  <h1>Hallo Brenda👋🏼 ! </h1>
   <div class="profile-wrapper">
     <input id="profilvorname" type="text" value="Brenda">
   <input id="profilnachname" type="text" value="Sieber">

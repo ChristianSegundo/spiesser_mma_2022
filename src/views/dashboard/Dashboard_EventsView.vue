@@ -79,14 +79,12 @@
 
 <script>
 // @ is an alias to /src
-import FirstComponent from '@/components/FirstComponent.vue'
 import 'v-calendar/dist/style.css'
 import { SpiesserTime } from '../../events/SpiesserTime.js'
 
 export default {
   name: 'Dashboard_EventsView',
   components: {
-    FirstComponent
   },
   methods: {
     linkto(ID) {

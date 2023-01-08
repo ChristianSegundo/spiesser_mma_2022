@@ -84,6 +84,21 @@ export default createStore({
 
         }, // END getters
         mutations: {
+                add_event(state, new_event){
+
+                        var event ={};
+                        event.id = Math.floor(Math.random() * 1000)
+                        event.eventname = new_event.eventname;
+                        event.eventbeschreibung = new_event.eventbeschreibung;
+                        event.startzeit = new_event.startzeit;
+                        event.eventdatum = new_event.eventdatum;
+                        event.zusagedatum = new_event.zusagedatum;
+                        event.ort = new_event.ort;
+                        event.mitbring_dinge = new_event.mitbring_dinge
+                        event.linkcode = "https://450446-12.web.fhgr.ch/dashboard/event-details/" + event.id
+                        
+                        state.alle_events.push(event)
+                }
         },
         actions: {
         },
